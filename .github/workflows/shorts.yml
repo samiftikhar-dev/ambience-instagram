@@ -1,0 +1,67 @@
+name: Post a Short
+
+# One Short a day at about 7pm Pacific in daylight time (6pm in winter), the
+# same Reel as Instagram's queue, from youtube.mjs. It keeps 18 hours between Shorts.
+on:
+  schedule:
+    - cron: '0 2 * * *'
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'check = report only; publish = upload the next Short now'
+        type: choice
+        options: [check, publish]
+        default: check
+
+permissions:
+  contents: write
+
+concurrency:
+  group: post-short
+  cancel-in-progress: false
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Stop if blocked
+        id: gate
+        run: |
+          if [ -f blocked-youtube.txt ]; then
+            echo "blocked-youtube.txt exists, so nothing posts until a person removes it:"; cat blocked-youtube.txt
+            echo "stop=1" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Post
+        if: steps.gate.outputs.stop != '1'
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+          GH_TOKEN: ${{ github.token }}
+          MODE: ${{ github.event.inputs.mode || 'publish' }}
+        run: |
+          rc=0; node youtube.mjs || rc=$?
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [ "$rc" = 76 ]; then
+            printf 'Google refused the YouTube credentials on %s. Run node yt-auth.mjs again, then delete this file.\n' "$(date -u +%FT%TZ)" > blocked-youtube.txt
+            git add blocked-youtube.txt
+          fi
+          [ -f shorts.json ] && git add shorts.json
+          if ! git diff --cached --quiet; then
+            git commit -qm "Record Short"
+            git pull -q --rebase
+            git push -q
+          fi
+          [ "$rc" = 75 ] && rc=0
+          exit $rc
