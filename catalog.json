@@ -1,0 +1,157 @@
+{
+  "_rules": "One entry per YouTube video, written only from the creator's own description. 'onSite' = the main sound was recorded at this place (allows 'I recorded this at ...'). 'made' says plainly what is real and what was added; every caption carries it. 'hooks' are the first-second lines a Reel opens on, each true for this video. Leave a video out (or set hold) when a fact is unknown.",
+  "GkS-f5JLaUE": {
+    "short": "Autumn Falls",
+    "place": "Autumn Falls",
+    "region": null,
+    "hours": 9,
+    "sounds": "a rushing waterfall and a morning fire",
+    "onSite": true,
+    "made": "The falls and the water are my own footage, filmed on location. The porch is AI-assisted.",
+    "hooks": ["A fall morning by the falls", "Sound on: a real waterfall", "Coffee, fire, falling water"],
+    "tags": ["#autumnambience", "#waterfallsounds", "#fireplacesounds", "#cozyautumn", "#natureasmr"]
+  },
+  "VFeKFpb8ZPM": {
+    "short": "Mount Rainier",
+    "place": "Mount Rainier",
+    "region": "Washington",
+    "hours": 2,
+    "sounds": "a small fire and morning birds",
+    "onSite": false,
+    "made": "The sound is my own field recording, with no music. Some of the scene is AI-assisted.",
+    "hooks": ["Sunrise at Mount Rainier, by the fire", "Two hours of a mountain sunrise", "Sound on: fire and morning birds"],
+    "tags": ["#mountrainier", "#sunriseambience", "#campfiresounds", "#pnwonderland", "#natureasmr"]
+  },
+  "XIqxg9G5ILI": {
+    "short": "Bow Falls, Banff",
+    "place": "Bow Falls",
+    "region": "Banff, Alberta",
+    "hours": 9,
+    "sounds": "Bow Falls, birdsong and a campfire",
+    "onSite": true,
+    "made": "I filmed the river, the falls and the mountains on location and recorded the falls at the same time. The seating area was made with AI.",
+    "hooks": ["I recorded this at Bow Falls in Banff", "Sound on: the real Bow Falls", "Can't sleep? Nine hours of this"],
+    "tags": ["#banff", "#waterfallsounds", "#campfireambience", "#canadianrockies", "#sleepsounds"]
+  },
+  "p2Q7J_TNuGA": {
+    "short": "A rainy PNW lake",
+    "place": "A Pacific Northwest lake",
+    "region": "Pacific Northwest",
+    "hours": 9,
+    "sounds": "rain on the lake, a wood fire and distant thunder",
+    "onSite": true,
+    "made": "This began as my own photograph of the lake, and every sound was recorded beside it. The motion is subtle AI animation.",
+    "hooks": ["Rain on the lake, fire on the deck", "Every sound here was recorded at this lake", "Can't sleep? Nine hours of rain"],
+    "tags": ["#rainambience", "#rainsounds", "#cozyrain", "#pnw", "#sleepsounds"]
+  },
+  "2rFgIGbhNtA": {
+    "short": "Twin Falls, Washington",
+    "place": "Twin Falls",
+    "region": "Washington",
+    "hours": 9,
+    "sounds": "the rushing Snoqualmie River and a crackling fire",
+    "onSite": true,
+    "made": "I filmed the river while hiking. The seating carved into the rock is imagined, made to follow the real rock.",
+    "hooks": ["I filmed this river on a hike", "Sound on: the Snoqualmie River", "A seat by the river, nine hours long"],
+    "tags": ["#riversounds", "#campfireambience", "#washingtonstate", "#pnw", "#natureasmr"]
+  },
+  "KGhhKbZ1NZ4": {
+    "short": "The Sawtooths, Idaho",
+    "place": "Stanley Basin",
+    "region": "Sawtooth Mountains, Idaho",
+    "hours": 9,
+    "sounds": "wind, the Salmon River and a warm fire",
+    "onSite": false,
+    "made": "This began as a photo I took here years ago, expanded and brought to life. The sound is real field recordings.",
+    "hooks": ["A photo I took in the Sawtooths, brought to life", "Summer afternoon above the Salmon River", "Nine hours of mountain wind and fire"],
+    "tags": ["#sawtoothmountains", "#idaho", "#cabinambience", "#mountainviews", "#natureasmr"]
+  },
+  "ERo2kfGJJXA": {
+    "short": "Kay Falls, BC",
+    "place": "Kay Falls",
+    "region": "British Columbia",
+    "hours": 9,
+    "sounds": "Kay Falls and a stone fireplace",
+    "onSite": true,
+    "made": "The waterfall sound was recorded at Kay Falls and the fireplace is a separate real recording. The cabin is imagined.",
+    "hooks": ["I recorded this waterfall in British Columbia", "Sound on: the real Kay Falls", "Can't sleep? Nine hours of this"],
+    "tags": ["#waterfallsounds", "#cabinambience", "#britishcolumbia", "#fireplacesounds", "#sleepsounds"]
+  },
+  "8a97ygxGfss": {
+    "short": "A desert storm, Arizona",
+    "place": "Hieroglyphic Spring",
+    "region": "Arizona",
+    "hours": 9,
+    "sounds": "monsoon rain, thunder and runoff",
+    "onSite": false,
+    "made": "This began as my photograph of Hieroglyphic Spring. The storm is visual effects, and the sound is real field recordings by me and other recordists.",
+    "hooks": ["An Arizona monsoon from a desert shelter", "Sound on: real desert thunder", "Nine hours of desert rain"],
+    "tags": ["#thunderstormsounds", "#rainsounds", "#arizonamonsoon", "#desertstorm", "#sleepsounds"]
+  },
+  "o5rIMjVFMmw": {
+    "short": "Fall Creek Falls at night",
+    "place": "Fall Creek Falls",
+    "region": null,
+    "hours": 9,
+    "sounds": "the falls at night and a firepit",
+    "onSite": true,
+    "made": "The waterfall sound was recorded on location at Fall Creek Falls. The gazebo is imagined.",
+    "hooks": ["I recorded this waterfall at night", "Sound on: Fall Creek Falls", "A gazebo, a fire, a waterfall"],
+    "tags": ["#waterfallsounds", "#nightambience", "#firepit", "#natureasmr", "#sleepsounds"]
+  },
+  "FUCjvCCEFz4": {
+    "short": "A cave above Phoenix",
+    "place": "Broadway Cave",
+    "region": "Phoenix, Arizona",
+    "hours": 9,
+    "sounds": "only a crackling campfire",
+    "onSite": false,
+    "made": "A real cave above Phoenix, from sunset to stars. The only sound is a campfire.",
+    "hooks": ["A campfire in a cave above Phoenix", "Sunset to stars, nine hours", "The only sound is the fire"],
+    "tags": ["#campfiresounds", "#stargazing", "#phoenixarizona", "#desertnights", "#sleepsounds"]
+  },
+  "NcEmJ5Z52to": {
+    "short": "Grassi Lakes, Alberta",
+    "place": "Grassi Lakes",
+    "region": "the Canadian Rockies",
+    "hours": 9,
+    "sounds": "lake water, birdsong and a campfire",
+    "onSite": true,
+    "made": "Real footage filmed at Grassi Lakes, with nature sound recorded around the lake. Subtle animation brings the fire, water and sky to life.",
+    "hooks": ["I filmed this at Grassi Lakes", "Sound on: a turquoise lake in the Rockies", "Inside the tent, nine hours"],
+    "tags": ["#grassilakes", "#canadianrockies", "#campfireambience", "#tentcamping", "#natureasmr"]
+  },
+  "aTX1B8qvLdU": {
+    "short": "A valley at Fall Creek Falls",
+    "place": "Fall Creek Falls",
+    "region": null,
+    "hours": 9,
+    "sounds": "flowing water, birds and firelight",
+    "onSite": true,
+    "made": "Filmed on location at Fall Creek Falls, with the water and the birds recorded there. The scene is enhanced.",
+    "hooks": ["Watch for the fly fisherman", "I filmed this valley at Fall Creek Falls", "Sound on: water and birdsong"],
+    "tags": ["#waterfallsounds", "#birdsong", "#valleyview", "#natureasmr", "#relaxingsounds"]
+  },
+  "EndB3H7G9xY": {
+    "short": "A desert oasis at dusk",
+    "place": "The Coachella Valley",
+    "region": "California",
+    "hours": 9,
+    "sounds": "desert breeze, birdsong and a firepit",
+    "onSite": true,
+    "made": "The sound was recorded on location. The motion of the trees, lanterns and pool is added.",
+    "hooks": ["A desert evening by the pool", "Sound on: a real desert breeze", "Nine hours of a warm desert dusk"],
+    "tags": ["#desertambience", "#firepit", "#poolside", "#coachellavalley", "#relaxingsounds"]
+  },
+  "Ud9OamPfHJo": {
+    "short": "Rain on Kauai",
+    "place": "Kauai",
+    "region": "Hawaii",
+    "hours": 9,
+    "sounds": "heavy tropical rain",
+    "onSite": true,
+    "made": "The rain is a real recording of heavy rainfall. The visuals are enhanced and animated.",
+    "hooks": ["Can't sleep? Kauai rain for nine hours", "Sound on: real tropical rain", "A rainy afternoon on Kauai"],
+    "tags": ["#rainsounds", "#kauai", "#tropicalrain", "#sleepsounds", "#rainambience"]
+  }
+}

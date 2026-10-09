@@ -1,0 +1,66 @@
+name: Post a Reel
+
+# One Reel a day at about 8:30pm Pacific in daylight time (7:30pm in winter):
+# evening is when people look for something to fall asleep or wind down to.
+# GitHub can start scheduled runs late; publish.mjs keeps 18 hours between Reels.
+on:
+  schedule:
+    - cron: '30 3 * * *'
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'check = report only; publish = post the next Reel now'
+        type: choice
+        options: [check, publish]
+        default: check
+
+permissions:
+  contents: write
+
+concurrency:
+  group: post-reel
+  cancel-in-progress: false
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Stop if blocked
+        id: gate
+        run: |
+          if [ -f blocked.txt ]; then
+            echo "blocked.txt exists, so nothing posts until a person removes it:"; cat blocked.txt
+            echo "stop=1" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Post
+        if: steps.gate.outputs.stop != '1'
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          GH_TOKEN: ${{ github.token }}
+          MODE: ${{ github.event.inputs.mode || 'publish' }}
+        run: |
+          rc=0; node publish.mjs || rc=$?
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [ "$rc" = 76 ]; then
+            printf 'Instagram refused on %s (token expired, or Meta restricted the app). Renew the token, then delete this file.\n' "$(date -u +%FT%TZ)" > blocked.txt
+            git add blocked.txt
+          fi
+          [ -f published.json ] && git add published.json
+          if ! git diff --cached --quiet; then
+            git commit -qm "Record Reel"
+            git pull -q --rebase
+            git push -q
+          fi
+          [ "$rc" = 75 ] && rc=0
+          exit $rc
