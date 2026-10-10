@@ -5,7 +5,7 @@
     "hook": "I recorded this waterfall at night",
     "start": null,
     "focus": 0.5,
-    "fit": "crop"
+    "fit": null
   },
   {
     "id": "8a97ygxGfss-1",
@@ -13,7 +13,7 @@
     "hook": "An Arizona monsoon from a desert shelter",
     "start": null,
     "focus": 0.5,
-    "fit": "crop"
+    "fit": null
   },
   {
     "id": "ERo2kfGJJXA-1",
@@ -21,7 +21,7 @@
     "hook": "I recorded this waterfall in British Columbia",
     "start": null,
     "focus": 0.5,
-    "fit": "crop"
+    "fit": null
   },
   {
     "id": "Ud9OamPfHJo-1",
@@ -29,7 +29,7 @@
     "hook": "Can't sleep? Kauai rain for nine hours",
     "start": null,
     "focus": 0.5,
-    "fit": "crop"
+    "fit": null
   },
   {
     "id": "NcEmJ5Z52to-1",
@@ -37,7 +37,7 @@
     "hook": "I filmed this at Grassi Lakes",
     "start": null,
     "focus": 0.5,
-    "fit": "crop"
+    "fit": null
   },
   {
     "id": "aTX1B8qvLdU-1",
@@ -45,7 +45,7 @@
     "hook": "Watch for the fly fisherman",
     "start": null,
     "focus": 0.5,
-    "fit": "crop"
+    "fit": null
   },
   {
     "id": "p2Q7J_TNuGA-1",
@@ -53,7 +53,7 @@
     "hook": "Rain on the lake, fire on the deck",
     "start": null,
     "focus": 0.5,
-    "fit": "crop"
+    "fit": null
   },
   {
     "id": "EndB3H7G9xY-1",
@@ -61,7 +61,7 @@
     "hook": "A desert evening by the pool",
     "start": null,
     "focus": 0.5,
-    "fit": "crop"
+    "fit": null
   },
   {
     "id": "XIqxg9G5ILI-1",
@@ -69,7 +69,7 @@
     "hook": "I recorded this at Bow Falls in Banff",
     "start": null,
     "focus": 0.5,
-    "fit": "crop"
+    "fit": null
   },
   {
     "id": "KGhhKbZ1NZ4-1",
@@ -77,7 +77,7 @@
     "hook": "A photo I took in the Sawtooths, brought to life",
     "start": null,
     "focus": 0.5,
-    "fit": "crop"
+    "fit": null
   },
   {
     "id": "2rFgIGbhNtA-1",
@@ -85,7 +85,7 @@
     "hook": "I filmed this river on a hike",
     "start": null,
     "focus": 0.5,
-    "fit": "crop"
+    "fit": null
   },
   {
     "id": "FUCjvCCEFz4-1",
@@ -93,7 +93,7 @@
     "hook": "A campfire in a cave above Phoenix",
     "start": null,
     "focus": 0.5,
-    "fit": "crop"
+    "fit": null
   },
   {
     "id": "VFeKFpb8ZPM-1",
@@ -101,7 +101,7 @@
     "hook": "Sunrise at Mount Rainier, by the fire",
     "start": null,
     "focus": 0.5,
-    "fit": "crop"
+    "fit": null
   },
   {
     "id": "GkS-f5JLaUE-1",
@@ -109,7 +109,7 @@
     "hook": "A fall morning by the falls",
     "start": null,
     "focus": 0.5,
-    "fit": "crop"
+    "fit": null
   },
   {
     "id": "o5rIMjVFMmw-2",
@@ -117,7 +117,7 @@
     "hook": "Sound on: Fall Creek Falls",
     "start": null,
     "focus": 0.5,
-    "fit": "crop"
+    "fit": null
   },
   {
     "id": "8a97ygxGfss-2",
@@ -125,7 +125,7 @@
     "hook": "Sound on: real desert thunder",
     "start": null,
     "focus": 0.5,
-    "fit": "crop"
+    "fit": null
   },
   {
     "id": "ERo2kfGJJXA-2",
@@ -133,7 +133,7 @@
     "hook": "Sound on: the real Kay Falls",
     "start": null,
     "focus": 0.5,
-    "fit": "crop"
+    "fit": null
   },
   {
     "id": "Ud9OamPfHJo-2",
@@ -141,7 +141,7 @@
     "hook": "Sound on: real tropical rain",
     "start": null,
     "focus": 0.5,
-    "fit": "crop"
+    "fit": null
   },
   {
     "id": "NcEmJ5Z52to-2",
@@ -149,7 +149,7 @@
     "hook": "Sound on: a turquoise lake in the Rockies",
     "start": null,
     "focus": 0.5,
-    "fit": "crop"
+    "fit": null
   },
   {
     "id": "aTX1B8qvLdU-2",
@@ -157,7 +157,7 @@
     "hook": "I filmed this valley at Fall Creek Falls",
     "start": null,
     "focus": 0.5,
-    "fit": "crop"
+    "fit": null
   },
   {
     "id": "p2Q7J_TNuGA-2",
@@ -165,7 +165,7 @@
     "hook": "Every sound here was recorded at this lake",
     "start": null,
     "focus": 0.5,
-    "fit": "crop"
+    "fit": null
   },
   {
     "id": "EndB3H7G9xY-2",
@@ -173,7 +173,7 @@
     "hook": "Sound on: a real desert breeze",
     "start": null,
     "focus": 0.5,
-    "fit": "crop"
+    "fit": null
   },
   {
     "id": "XIqxg9G5ILI-2",
@@ -181,7 +181,7 @@
     "hook": "Sound on: the real Bow Falls",
     "start": null,
     "focus": 0.5,
-    "fit": "crop"
+    "fit": null
   },
   {
     "id": "KGhhKbZ1NZ4-2",
@@ -189,7 +189,7 @@
     "hook": "Summer afternoon above the Salmon River",
     "start": null,
     "focus": 0.5,
-    "fit": "crop"
+    "fit": null
   },
   {
     "id": "2rFgIGbhNtA-2",
@@ -197,7 +197,7 @@
     "hook": "Sound on: the Snoqualmie River",
     "start": null,
     "focus": 0.5,
-    "fit": "crop"
+    "fit": null
   },
   {
     "id": "FUCjvCCEFz4-2",
@@ -205,7 +205,7 @@
     "hook": "Sunset to stars, nine hours",
     "start": null,
     "focus": 0.5,
-    "fit": "crop"
+    "fit": null
   },
   {
     "id": "VFeKFpb8ZPM-2",
@@ -213,7 +213,7 @@
     "hook": "Two hours of a mountain sunrise",
     "start": null,
     "focus": 0.5,
-    "fit": "crop"
+    "fit": null
   },
   {
     "id": "GkS-f5JLaUE-2",
@@ -221,7 +221,7 @@
     "hook": "Sound on: a real waterfall",
     "start": null,
     "focus": 0.5,
-    "fit": "crop"
+    "fit": null
   },
   {
     "id": "o5rIMjVFMmw-3",
@@ -229,7 +229,7 @@
     "hook": "A gazebo, a fire, a waterfall",
     "start": null,
     "focus": 0.5,
-    "fit": "crop"
+    "fit": null
   },
   {
     "id": "8a97ygxGfss-3",
@@ -237,7 +237,7 @@
     "hook": "Nine hours of desert rain",
     "start": null,
     "focus": 0.5,
-    "fit": "crop"
+    "fit": null
   },
   {
     "id": "ERo2kfGJJXA-3",
@@ -245,7 +245,7 @@
     "hook": "Can't sleep? Nine hours of this",
     "start": null,
     "focus": 0.5,
-    "fit": "crop"
+    "fit": null
   },
   {
     "id": "Ud9OamPfHJo-3",
@@ -253,7 +253,7 @@
     "hook": "A rainy afternoon on Kauai",
     "start": null,
     "focus": 0.5,
-    "fit": "crop"
+    "fit": null
   },
   {
     "id": "NcEmJ5Z52to-3",
@@ -261,7 +261,7 @@
     "hook": "Inside the tent, nine hours",
     "start": null,
     "focus": 0.5,
-    "fit": "crop"
+    "fit": null
   },
   {
     "id": "aTX1B8qvLdU-3",
@@ -269,7 +269,7 @@
     "hook": "Sound on: water and birdsong",
     "start": null,
     "focus": 0.5,
-    "fit": "crop"
+    "fit": null
   },
   {
     "id": "p2Q7J_TNuGA-3",
@@ -277,7 +277,7 @@
     "hook": "Can't sleep? Nine hours of rain",
     "start": null,
     "focus": 0.5,
-    "fit": "crop"
+    "fit": null
   },
   {
     "id": "EndB3H7G9xY-3",
@@ -285,7 +285,7 @@
     "hook": "Nine hours of a warm desert dusk",
     "start": null,
     "focus": 0.5,
-    "fit": "crop"
+    "fit": null
   },
   {
     "id": "XIqxg9G5ILI-3",
@@ -293,7 +293,7 @@
     "hook": "Can't sleep? Nine hours of this",
     "start": null,
     "focus": 0.5,
-    "fit": "crop"
+    "fit": null
   },
   {
     "id": "KGhhKbZ1NZ4-3",
@@ -301,7 +301,7 @@
     "hook": "Nine hours of mountain wind and fire",
     "start": null,
     "focus": 0.5,
-    "fit": "crop"
+    "fit": null
   },
   {
     "id": "2rFgIGbhNtA-3",
@@ -309,7 +309,7 @@
     "hook": "A seat by the river, nine hours long",
     "start": null,
     "focus": 0.5,
-    "fit": "crop"
+    "fit": null
   },
   {
     "id": "FUCjvCCEFz4-3",
@@ -317,7 +317,7 @@
     "hook": "The only sound is the fire",
     "start": null,
     "focus": 0.5,
-    "fit": "crop"
+    "fit": null
   },
   {
     "id": "VFeKFpb8ZPM-3",
@@ -325,7 +325,7 @@
     "hook": "Sound on: fire and morning birds",
     "start": null,
     "focus": 0.5,
-    "fit": "crop"
+    "fit": null
   },
   {
     "id": "GkS-f5JLaUE-3",
@@ -333,6 +333,6 @@
     "hook": "Coffee, fire, falling water",
     "start": null,
     "focus": 0.5,
-    "fit": "crop"
+    "fit": null
   }
 ]

@@ -13,7 +13,7 @@
  */
 import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { catalog } from './lib.mjs';
-import { sourceFor, durationOf, LENGTH } from './render.mjs';
+import { sourceFor, durationOf, heightOf, LENGTH } from './render.mjs';
 
 const videos = catalog();
 const views = existsSync('videos.json') ? JSON.parse(readFileSync('videos.json', 'utf8')) : {};
@@ -35,7 +35,10 @@ for (let k = 0; k < rounds; k++) {
       const d = durationOf(src);
       start = Math.max(0, Math.min(d - LENGTH - 3, Math.round(d * (0.08 + 0.3 * k))));
     }
-    clips.push({ id: clipId, video: id, hook, start, focus: prior.focus ?? 0.5, fit: prior.fit ?? 'crop', ...(prior.hold ? { hold: true } : {}) });
+    // Below 1080p a 9:16 crop is enlarged past 1.8x and looks soft, so the
+    // whole frame goes on a blurred copy instead. A hand-set fit is kept.
+    const fit = prior.fit ?? (src ? (heightOf(src) < 1080 ? 'full' : 'crop') : null);
+    clips.push({ id: clipId, video: id, hook, start, focus: prior.focus ?? 0.5, fit, ...(prior.hold ? { hold: true } : {}) });
   }
 }
 writeFileSync('clips.json', `${JSON.stringify(clips, null, 2)}\n`);

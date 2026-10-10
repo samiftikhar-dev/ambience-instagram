@@ -38,6 +38,10 @@ export function durationOf(file) {
   return Number(execFileSync('ffprobe', ['-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', file]).toString().trim());
 }
 
+export function heightOf(file) {
+  return Number(execFileSync('ffprobe', ['-v', 'error', '-select_streams', 'v:0', '-show_entries', 'stream=height', '-of', 'csv=p=0', file]).toString().trim());
+}
+
 function wrap(text, width) {
   const out = [];
   let line = '';
@@ -79,7 +83,8 @@ export function renderClip(clip, v, outDir = 'out') {
     : `crop=w=ih*9/16:h=ih:x=(iw-ow)*${focus}:y=0,scale=${W}:${H}`;
 
   const hookLines = wrap(clip.hook, 18);
-  const top = 300;
+  // The full layout's frame starts about 656px down; keep the place line clear of it.
+  const top = clip.fit === 'full' ? 230 : 300;
   const overlays = [
     ...hookLines.map((line, i) => text(dir, `h${i}`, line, { font: SERIF, size: 78, y: top + i * 96, alpha: HOOK_ALPHA })),
     text(dir, 'place', spaced(v.short), { font: SANS, size: 30, y: top + hookLines.length * 96 + 40, alpha: HOOK_ALPHA }),
