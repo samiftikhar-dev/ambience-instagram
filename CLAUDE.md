@@ -31,10 +31,17 @@ and the rules.
 - Layout: whole frame on a blurred copy (fit "full"), channel name under it.
 - AI: one honest line per caption, never the headline.
 - Behind-the-scenes posts wait for photos of Bob recording (Sam will send).
-- Comments: daily list at 7am from the scheduled task
-  ambience-daily-comment-list (C:\Users\samif\.claude\scheduled-tasks),
-  written to C:\Users\samif\ambience-engagement\<date>.md; Mackenzie posts
-  them by hand.
+- Comments: Sam asks in chat each day ("today's comments"); follow
+  COMMENTS.md (read-only browsing in the browser pane, Instagram signed in as
+  the.ambience.experience), save to C:\Users\samif\ambience-engagement\<date>.md
+  and history.json, and reply with the list. The scheduled routine was
+  deleted on Oct 10. Mackenzie posts them by hand.
+- Posting: 5 a day (8am, 11am, 2pm, 5pm, 8:30pm Pacific), never 11pm-7am
+  unless a hand-started burst sets anytime. First Reel live Oct 10 07:37 UTC
+  (instagram.com/reel/DeTkCaKkjaT). Launch: 3 at night + 7 from 8am Oct 10
+  (one-time task ambience-launch-burst).
+- The Instagram password change on Oct 9 killed the first token: any password
+  change means Generate token again and update IG_ACCESS_TOKEN.
 - Open with Bob: Pinnacle Peak (kSJ4KJAGqwI) credits audio to "Lance", so it
   is left out of the catalog; "Johnsin Creek" spelling (V63ZKoDurZ0 is
   captioned "a mountain creek cabin" until confirmed).
