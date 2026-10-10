@@ -110,7 +110,15 @@ async function main() {
   const done = existsSync('published.json') ? JSON.parse(readFileSync('published.json', 'utf8')) : {};
   const inQueue = queued();
 
-  const me = await api('me', { params: { fields: 'user_id,username' } });
+  // A dead or revoked token stops everything until a person renews it (76
+  // makes the workflow write blocked.txt), wherever in the run it shows up.
+  let me;
+  try {
+    me = await api('me', { params: { fields: 'user_id,username' } });
+  } catch (err) {
+    console.error(err.message);
+    process.exit(BLOCKED.has(err.code) ? 76 : RATE_LIMIT.has(err.code) ? 75 : 1);
+  }
   const igId = me.user_id || me.id;
   const next = clips.find((c) => !c.hold && inQueue.has(c.id) && (!done[c.id] || done[c.id].status === 'failed'));
   const posted = Object.values(done).filter((d) => d.status === 'published');
@@ -123,6 +131,11 @@ async function main() {
     return;
   }
   if (!next) { console.log('Nothing rendered and waiting. Render more with render.mjs and upload with queue.mjs.'); return; }
+
+  // Never overnight, Pacific time, whatever starts the run: night posts reach
+  // nobody and read as a bot.
+  const hour = Number(new Intl.DateTimeFormat('en-US', { timeZone: 'America/Los_Angeles', hour: 'numeric', hourCycle: 'h23' }).format(new Date()));
+  if (hour < 7 || hour >= 23) { console.log(`It is ${hour}:00 in Pacific time; Reels post between 7am and 11pm.`); process.exit(75); }
 
   const last = posted.map((d) => Date.parse(d.at)).sort().pop();
   if (last && Date.now() - last < MIN_GAP_HOURS * 3600e3) { console.log('A Reel went out too recently; waiting for the next slot.'); process.exit(75); }
