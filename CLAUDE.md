@@ -21,6 +21,29 @@ and the rules.
 - On Windows, write files with the Write tool, not bash heredocs or `node -e`
   with backticks (a backtick ran a README command on Oct 9).
 
+## Lessons from Mackenzie's review notes (Oct 10 2026)
+
+- The YouTube descriptions are loose: Fall Creek was not a night recording,
+  the desert storm began as a hike photo with the shelter and storm AI, the
+  river camp's fire sound was not recorded there. Never infer provenance. The
+  catalog states only what a description says plus corrections; a video whose
+  description is silent uses the channel-wide line (`generic: true`).
+- Only videos whose facts Bob or Mackenzie confirmed on the review page's
+  "Facts to confirm" tab are uploaded to the queue.
+- Wording: no "place: sounds" colon lines, no hooks with colons, no repeated
+  "Sound on:" openers, "Pacific Northwest" at most once (lib.mjs lint).
+- The details she loves (the fly fisherman, the hummingbird) lead the hooks.
+- Newest upload first (Autumn Falls); plan.mjs puts it at the front.
+- Nothing posts unless a Reel is approved on the review page (collection
+  `approvals`); there is no default-approve.
+- Each Reel pops up "Full video on YouTube · link in bio" at 6 seconds.
+  Instagram's API cannot attach links or stickers to a Reel, so the bio link is
+  docs/index.html (node hub.mjs), a page of every video with its YouTube link.
+  GitHub Pages is NOT switched on until Sam says so.
+- The live Reels o5rIMjVFMmw-1 (said "at night") and 8a97ygxGfss-1 ("from a
+  desert shelter") carry wrong claims; Sam deletes them in the Instagram app
+  (the API cannot), then clear their entries from published.json.
+
 ## Strategy (Sam, Oct 10 2026)
 
 - Voice: Bob, first person. First Reel per video carries the about line in

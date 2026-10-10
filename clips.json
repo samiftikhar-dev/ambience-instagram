@@ -1,8 +1,16 @@
 [
   {
+    "id": "GkS-f5JLaUE-1",
+    "video": "GkS-f5JLaUE",
+    "hook": "An autumn morning by the falls",
+    "start": 10,
+    "focus": 0.5,
+    "fit": "full"
+  },
+  {
     "id": "o5rIMjVFMmw-1",
     "video": "o5rIMjVFMmw",
-    "hook": "I recorded this waterfall at night",
+    "hook": "I recorded this waterfall at Fall Creek",
     "start": 10,
     "focus": 0.5,
     "fit": "full"
@@ -10,7 +18,7 @@
   {
     "id": "8a97ygxGfss-1",
     "video": "8a97ygxGfss",
-    "hook": "An Arizona monsoon from a desert shelter",
+    "hook": "A monsoon storm over the Arizona desert",
     "start": 10,
     "focus": 0.5,
     "fit": "full"
@@ -26,7 +34,7 @@
   {
     "id": "Ud9OamPfHJo-1",
     "video": "Ud9OamPfHJo",
-    "hook": "Can't sleep? Kauai rain for nine hours",
+    "hook": "A rainy afternoon on Kauai",
     "start": 10,
     "focus": 0.5,
     "fit": "full"
@@ -34,7 +42,7 @@
   {
     "id": "NcEmJ5Z52to-1",
     "video": "NcEmJ5Z52to",
-    "hook": "I filmed this at Grassi Lakes",
+    "hook": "I filmed this at Grassi Lakes, near Banff",
     "start": 10,
     "focus": 0.5,
     "fit": "full"
@@ -50,7 +58,7 @@
   {
     "id": "p2Q7J_TNuGA-1",
     "video": "p2Q7J_TNuGA",
-    "hook": "Rain on the lake, fire on the deck",
+    "hook": "Rain on the lake, a fire on the deck",
     "start": 10,
     "focus": 0.5,
     "fit": "full"
@@ -58,7 +66,7 @@
   {
     "id": "EndB3H7G9xY-1",
     "video": "EndB3H7G9xY",
-    "hook": "A desert evening by the pool",
+    "hook": "A desert pool and a warm fire",
     "start": 10,
     "focus": 0.5,
     "fit": "full"
@@ -66,7 +74,7 @@
   {
     "id": "XIqxg9G5ILI-1",
     "video": "XIqxg9G5ILI",
-    "hook": "I recorded this at Bow Falls in Banff",
+    "hook": "I filmed this at Bow Falls in Banff",
     "start": 10,
     "focus": 0.5,
     "fit": "full"
@@ -74,7 +82,7 @@
   {
     "id": "KGhhKbZ1NZ4-1",
     "video": "KGhhKbZ1NZ4",
-    "hook": "A photo I took in the Sawtooths, brought to life",
+    "hook": "My Sawtooths photo, brought to life",
     "start": 10,
     "focus": 0.5,
     "fit": "full"
@@ -98,15 +106,7 @@
   {
     "id": "VFeKFpb8ZPM-1",
     "video": "VFeKFpb8ZPM",
-    "hook": "Sunrise at Mount Rainier, by the fire",
-    "start": 10,
-    "focus": 0.5,
-    "fit": "full"
-  },
-  {
-    "id": "GkS-f5JLaUE-1",
-    "video": "GkS-f5JLaUE",
-    "hook": "A fall morning by the falls",
+    "hook": "Sunrise at Sunrise, Mount Rainier",
     "start": 10,
     "focus": 0.5,
     "fit": "full"
@@ -154,7 +154,7 @@
   {
     "id": "Cukxb8epBws-1",
     "video": "Cukxb8epBws",
-    "hook": "I recorded this river and this fire",
+    "hook": "A river camp with a boiling cauldron",
     "start": 10,
     "focus": 0.5,
     "fit": "full"
@@ -192,9 +192,17 @@
     "fit": "full"
   },
   {
+    "id": "GkS-f5JLaUE-2",
+    "video": "GkS-f5JLaUE",
+    "hook": "Fall color, a morning fire and a waterfall",
+    "start": 46,
+    "focus": 0.5,
+    "fit": "full"
+  },
+  {
     "id": "o5rIMjVFMmw-2",
     "video": "o5rIMjVFMmw",
-    "hook": "Sound on: Fall Creek Falls",
+    "hook": "A gazebo, a fire and a waterfall",
     "start": 46,
     "focus": 0.5,
     "fit": "full"
@@ -202,7 +210,7 @@
   {
     "id": "8a97ygxGfss-2",
     "video": "8a97ygxGfss",
-    "hook": "Sound on: real desert thunder",
+    "hook": "Nearly 100 lightning strikes in one loop",
     "start": 46,
     "focus": 0.5,
     "fit": "full"
@@ -210,7 +218,7 @@
   {
     "id": "ERo2kfGJJXA-2",
     "video": "ERo2kfGJJXA",
-    "hook": "Sound on: the real Kay Falls",
+    "hook": "Nine hours beside a hidden waterfall cabin",
     "start": 46,
     "focus": 0.5,
     "fit": "full"
@@ -218,7 +226,7 @@
   {
     "id": "Ud9OamPfHJo-2",
     "video": "Ud9OamPfHJo",
-    "hook": "Sound on: real tropical rain",
+    "hook": "Heavy tropical rain over Kauai's valleys",
     "start": 46,
     "focus": 0.5,
     "fit": "full"
@@ -226,7 +234,7 @@
   {
     "id": "NcEmJ5Z52to-2",
     "video": "NcEmJ5Z52to",
-    "hook": "Sound on: a turquoise lake in the Rockies",
+    "hook": "A tent, a turquoise lake and a campfire",
     "start": 46,
     "focus": 0.5,
     "fit": "full"
@@ -234,7 +242,7 @@
   {
     "id": "aTX1B8qvLdU-2",
     "video": "aTX1B8qvLdU",
-    "hook": "I filmed this valley at Fall Creek Falls",
+    "hook": "A valley, a waterfall and a warm fire",
     "start": 46,
     "focus": 0.5,
     "fit": "full"
@@ -242,7 +250,7 @@
   {
     "id": "p2Q7J_TNuGA-2",
     "video": "p2Q7J_TNuGA",
-    "hook": "Every sound here was recorded at this lake",
+    "hook": "Watch the ducks paddle through the rain",
     "start": 46,
     "focus": 0.5,
     "fit": "full"
@@ -250,7 +258,7 @@
   {
     "id": "EndB3H7G9xY-2",
     "video": "EndB3H7G9xY",
-    "hook": "Sound on: a real desert breeze",
+    "hook": "Trees swaying beside a desert pool",
     "start": 46,
     "focus": 0.5,
     "fit": "full"
@@ -258,7 +266,7 @@
   {
     "id": "XIqxg9G5ILI-2",
     "video": "XIqxg9G5ILI",
-    "hook": "Sound on: the real Bow Falls",
+    "hook": "Turn your sound up for Bow Falls",
     "start": 46,
     "focus": 0.5,
     "fit": "full"
@@ -274,7 +282,7 @@
   {
     "id": "2rFgIGbhNtA-2",
     "video": "2rFgIGbhNtA",
-    "hook": "Sound on: the Snoqualmie River",
+    "hook": "A seat in the rock beside the river",
     "start": 46,
     "focus": 0.5,
     "fit": "full"
@@ -282,7 +290,7 @@
   {
     "id": "FUCjvCCEFz4-2",
     "video": "FUCjvCCEFz4",
-    "hook": "Sunset to stars, nine hours",
+    "hook": "Sunset to stars in nine hours",
     "start": 46,
     "focus": 0.5,
     "fit": "full"
@@ -290,15 +298,7 @@
   {
     "id": "VFeKFpb8ZPM-2",
     "video": "VFeKFpb8ZPM",
-    "hook": "Two hours of a mountain sunrise",
-    "start": 46,
-    "focus": 0.5,
-    "fit": "full"
-  },
-  {
-    "id": "GkS-f5JLaUE-2",
-    "video": "GkS-f5JLaUE",
-    "hook": "Sound on: a real waterfall",
+    "hook": "First light over the Cascades",
     "start": 46,
     "focus": 0.5,
     "fit": "full"
@@ -306,7 +306,7 @@
   {
     "id": "qFIUSfn6lhs-2",
     "video": "qFIUSfn6lhs",
-    "hook": "Can't sleep? Nine hours of this rain",
+    "hook": "Storm clouds drifting past the deck",
     "start": 46,
     "focus": 0.5,
     "fit": "full"
@@ -314,7 +314,7 @@
   {
     "id": "V63ZKoDurZ0-2",
     "video": "V63ZKoDurZ0",
-    "hook": "Sound on: a creek in spring runoff",
+    "hook": "A mountain creek in spring runoff",
     "start": 46,
     "focus": 0.5,
     "fit": "full"
@@ -322,7 +322,7 @@
   {
     "id": "oBeHCs9fbwE-2",
     "video": "oBeHCs9fbwE",
-    "hook": "Stargazing in Joshua Tree, nine hours",
+    "hook": "Crickets and a campfire in Joshua Tree",
     "start": 46,
     "focus": 0.5,
     "fit": "full"
@@ -330,7 +330,7 @@
   {
     "id": "Z0W-MjDr2cw-2",
     "video": "Z0W-MjDr2cw",
-    "hook": "Can't sleep? Nine hours of frogs and fire",
+    "hook": "Frogs, a fire pit and a little rain",
     "start": 46,
     "focus": 0.5,
     "fit": "full"
@@ -346,7 +346,7 @@
   {
     "id": "Cukxb8epBws-2",
     "video": "Cukxb8epBws",
-    "hook": "Sound on: a river at night",
+    "hook": "I recorded this river",
     "start": 46,
     "focus": 0.5,
     "fit": "full"
@@ -354,7 +354,7 @@
   {
     "id": "1-6DCrkii30-2",
     "video": "1-6DCrkii30",
-    "hook": "Sound on: a creek in spring runoff",
+    "hook": "Put this on while you work",
     "start": 46,
     "focus": 0.5,
     "fit": "full"
@@ -362,7 +362,7 @@
   {
     "id": "ppIA-0nR2uc-2",
     "video": "ppIA-0nR2uc",
-    "hook": "Tulip season under Mount Baker",
+    "hook": "A windmill turning in tulip season",
     "start": 46,
     "focus": 0.5,
     "fit": "full"
@@ -378,15 +378,23 @@
   {
     "id": "baWJQgAw5Ss-2",
     "video": "baWJQgAw5Ss",
-    "hook": "Sound on: fire and birdsong",
+    "hook": "Wildflowers swaying outside a cozy cabin",
     "start": 46,
+    "focus": 0.5,
+    "fit": "full"
+  },
+  {
+    "id": "GkS-f5JLaUE-3",
+    "video": "GkS-f5JLaUE",
+    "hook": "Leaves moving in the morning breeze",
+    "start": 82,
     "focus": 0.5,
     "fit": "full"
   },
   {
     "id": "o5rIMjVFMmw-3",
     "video": "o5rIMjVFMmw",
-    "hook": "A gazebo, a fire, a waterfall",
+    "hook": "Nine hours of falling water",
     "start": 82,
     "focus": 0.5,
     "fit": "full"
@@ -394,7 +402,7 @@
   {
     "id": "8a97ygxGfss-3",
     "video": "8a97ygxGfss",
-    "hook": "Nine hours of desert rain",
+    "hook": "Rain and thunder recorded in the field",
     "start": 82,
     "focus": 0.5,
     "fit": "full"
@@ -402,7 +410,7 @@
   {
     "id": "ERo2kfGJJXA-3",
     "video": "ERo2kfGJJXA",
-    "hook": "Can't sleep? Nine hours of this",
+    "hook": "A stone fireplace and a rushing waterfall",
     "start": 82,
     "focus": 0.5,
     "fit": "full"
@@ -410,7 +418,7 @@
   {
     "id": "Ud9OamPfHJo-3",
     "video": "Ud9OamPfHJo",
-    "hook": "A rainy afternoon on Kauai",
+    "hook": "Nine hours of Kauai rain",
     "start": 82,
     "focus": 0.5,
     "fit": "full"
@@ -418,7 +426,7 @@
   {
     "id": "NcEmJ5Z52to-3",
     "video": "NcEmJ5Z52to",
-    "hook": "Inside the tent, nine hours",
+    "hook": "Turn your sound up for a lake in the Rockies",
     "start": 82,
     "focus": 0.5,
     "fit": "full"
@@ -426,7 +434,7 @@
   {
     "id": "aTX1B8qvLdU-3",
     "video": "aTX1B8qvLdU",
-    "hook": "Sound on: water and birdsong",
+    "hook": "Birdsong over a waterfall valley",
     "start": 82,
     "focus": 0.5,
     "fit": "full"
@@ -434,7 +442,7 @@
   {
     "id": "p2Q7J_TNuGA-3",
     "video": "p2Q7J_TNuGA",
-    "hook": "Can't sleep? Nine hours of rain",
+    "hook": "Distant thunder over a quiet lake",
     "start": 82,
     "focus": 0.5,
     "fit": "full"
@@ -442,7 +450,7 @@
   {
     "id": "EndB3H7G9xY-3",
     "video": "EndB3H7G9xY",
-    "hook": "Nine hours of a warm desert dusk",
+    "hook": "Nine hours of a soft desert breeze",
     "start": 82,
     "focus": 0.5,
     "fit": "full"
@@ -450,7 +458,7 @@
   {
     "id": "XIqxg9G5ILI-3",
     "video": "XIqxg9G5ILI",
-    "hook": "Can't sleep? Nine hours of this",
+    "hook": "Nine hours beside Bow Falls",
     "start": 82,
     "focus": 0.5,
     "fit": "full"
@@ -458,7 +466,7 @@
   {
     "id": "KGhhKbZ1NZ4-3",
     "video": "KGhhKbZ1NZ4",
-    "hook": "Nine hours of mountain wind and fire",
+    "hook": "Mountain wind, a river and a warm fire",
     "start": 82,
     "focus": 0.5,
     "fit": "full"
@@ -466,7 +474,7 @@
   {
     "id": "2rFgIGbhNtA-3",
     "video": "2rFgIGbhNtA",
-    "hook": "A seat by the river, nine hours long",
+    "hook": "Nine hours of rushing water",
     "start": 82,
     "focus": 0.5,
     "fit": "full"
@@ -482,15 +490,7 @@
   {
     "id": "VFeKFpb8ZPM-3",
     "video": "VFeKFpb8ZPM",
-    "hook": "Sound on: fire and morning birds",
-    "start": 82,
-    "focus": 0.5,
-    "fit": "full"
-  },
-  {
-    "id": "GkS-f5JLaUE-3",
-    "video": "GkS-f5JLaUE",
-    "hook": "Coffee, fire, falling water",
+    "hook": "A small fire and morning birdsong",
     "start": 82,
     "focus": 0.5,
     "fit": "full"
@@ -498,7 +498,7 @@
   {
     "id": "qFIUSfn6lhs-3",
     "video": "qFIUSfn6lhs",
-    "hook": "Sound on: rain and a fireplace",
+    "hook": "Rain and a fireplace for nine hours",
     "start": 82,
     "focus": 0.5,
     "fit": "full"
@@ -506,7 +506,7 @@
   {
     "id": "V63ZKoDurZ0-3",
     "video": "V63ZKoDurZ0",
-    "hook": "Nine hours of a mountain morning",
+    "hook": "Birds, a fire and a rushing creek",
     "start": 82,
     "focus": 0.5,
     "fit": "full"
@@ -514,7 +514,7 @@
   {
     "id": "oBeHCs9fbwE-3",
     "video": "oBeHCs9fbwE",
-    "hook": "Sound on: crickets and a campfire",
+    "hook": "Stargazing in Joshua Tree for nine hours",
     "start": 82,
     "focus": 0.5,
     "fit": "full"
@@ -522,7 +522,7 @@
   {
     "id": "Z0W-MjDr2cw-3",
     "video": "Z0W-MjDr2cw",
-    "hook": "Sound on: a frog chorus by the lake",
+    "hook": "A frog chorus beside a quiet pond",
     "start": 82,
     "focus": 0.5,
     "fit": "full"
@@ -530,7 +530,7 @@
   {
     "id": "LbVCwLcFBV0-3",
     "video": "LbVCwLcFBV0",
-    "hook": "Can't sleep? Nine hours of rainforest rain",
+    "hook": "Rain and a fire in a glass-walled room",
     "start": 82,
     "focus": 0.5,
     "fit": "full"
@@ -538,7 +538,7 @@
   {
     "id": "Cukxb8epBws-3",
     "video": "Cukxb8epBws",
-    "hook": "A fire by the river, nine hours",
+    "hook": "A campfire beside a forest river",
     "start": 82,
     "focus": 0.5,
     "fit": "full"
@@ -546,7 +546,7 @@
   {
     "id": "1-6DCrkii30-3",
     "video": "1-6DCrkii30",
-    "hook": "Put this on while you work",
+    "hook": "Creek water and a morning fire",
     "start": 82,
     "focus": 0.5,
     "fit": "full"
@@ -554,7 +554,7 @@
   {
     "id": "ppIA-0nR2uc-3",
     "video": "ppIA-0nR2uc",
-    "hook": "Put this on while you work",
+    "hook": "Tulips and Mount Baker, nine hours long",
     "start": 82,
     "focus": 0.5,
     "fit": "full"
@@ -562,7 +562,7 @@
   {
     "id": "G2GQ5mhpUWY-3",
     "video": "G2GQ5mhpUWY",
-    "hook": "Sound on: a spring garden",
+    "hook": "A spring garden with a hidden surprise",
     "start": 82,
     "focus": 0.5,
     "fit": "full"
@@ -570,7 +570,7 @@
   {
     "id": "baWJQgAw5Ss-3",
     "video": "baWJQgAw5Ss",
-    "hook": "Put this on while you read",
+    "hook": "A fire, birdsong and a meadow breeze",
     "start": 82,
     "focus": 0.5,
     "fit": "full"

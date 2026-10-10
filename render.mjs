@@ -88,9 +88,13 @@ export function renderClip(clip, v, outDir = 'out') {
   // The channel's name stays on for the whole clip (so the loop has no jump),
   // in the blurred band under the frame, above where Instagram draws the caption.
   const brandY = clip.fit === 'crop' ? 1340 : 1310;
+  // The tagline gives way to a pop-up at 6 seconds: where the full video is.
+  const TAG_ALPHA = 'if(lt(t,5.5),0.75,if(lt(t,6.2),0.75*(6.2-t)/0.7,0))';
+  const LINK_ALPHA = 'if(lt(t,6),0,if(lt(t,6.7),0.95*(t-6)/0.7,0.95))';
   const overlays = [
     text(dir, 'brand', spaced('The Ambience Experience'), { font: SANS, size: 32, y: brandY, alpha: '0.92' }),
-    text(dir, 'tagline', 'real places · real sound', { font: SERIF, size: 34, y: brandY + 56, alpha: '0.75' }),
+    text(dir, 'tagline', 'real places · real sound', { font: SERIF, size: 34, y: brandY + 56, alpha: TAG_ALPHA }),
+    text(dir, 'link', 'Full video on YouTube · link in bio', { font: SERIF, size: 34, y: brandY + 56, alpha: LINK_ALPHA }),
     ...hookLines.map((line, i) => text(dir, `h${i}`, line, { font: SERIF, size: 78, y: top + i * 96, alpha: HOOK_ALPHA })),
     text(dir, 'place', spaced(v.short), { font: SANS, size: 30, y: top + hookLines.length * 96 + 40, alpha: HOOK_ALPHA }),
   ];

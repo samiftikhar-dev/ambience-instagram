@@ -19,7 +19,9 @@ const videos = catalog();
 const views = existsSync('videos.json') ? JSON.parse(readFileSync('videos.json', 'utf8')) : {};
 const old = new Map((existsSync('clips.json') ? JSON.parse(readFileSync('clips.json', 'utf8')) : []).map((c) => [c.id, c]));
 
-const ids = Object.keys(videos).sort((a, b) => (views[b]?.views || 0) - (views[a]?.views || 0));
+// Mackenzie (Oct 10): the newest upload goes out first, then best-liked first.
+const newest = Object.keys(videos).sort((a, b) => String(views[b]?.published || '').localeCompare(String(views[a]?.published || '')))[0];
+const ids = Object.keys(videos).sort((a, b) => (b === newest) - (a === newest) || (views[b]?.views || 0) - (views[a]?.views || 0));
 const rounds = Math.max(...ids.map((id) => videos[id].hooks.length));
 const clips = [];
 for (let k = 0; k < rounds; k++) {
