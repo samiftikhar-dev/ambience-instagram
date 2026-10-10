@@ -31,11 +31,12 @@ and the rules.
   _manage_comments, _manage_insights. Basic settings: PRIVACY.md links,
   category Entertainment, contact theambienceexp@gmail.com. App icon still
   to upload (brand/app-icon-1024.jpg).
-- WAITING ON SAM: add the.ambience.experience as an **Instagram Tester** (not
-  "Tester", which looks for a Facebook user), accept it at
-  instagram.com/accounts/manage_access, generate the token, store it as the
-  IG_ACCESS_TOKEN repository secret, then run "Post a Reel" with mode check.
-  Claude Code's auto mode refuses to grant app roles; Sam clicks those.
+- CONNECTED Oct 10 2026: IG_ACCESS_TOKEN set 05:27 UTC; check run 38027636076
+  green ("@the.ambience.experience: 0 Reels posted", quota 0/100). Tester is
+  "Instagram Tester" (not "Tester", which looks for a Facebook user). The
+  browser pane also holds a LuxyBasement Instagram session: the token pop-up
+  used it and dropped to the feed until Sam switched accounts. Claude Code's
+  auto mode refuses to grant app roles or accept invites; Sam clicks those.
 - WAITING ON HIM: source videos named <youtubeId>.mp4 into sources/. Nothing
   is rendered yet (tested only on a synthetic pattern).
 - Token lasts 60 days: renew around Nov 28 2026.
@@ -48,8 +49,6 @@ and the rules.
 
 ## Next session
 
-1. Ask whether the token is stored; run the check workflow
-   (`gh workflow run publish.yml -f mode=check`, then `gh run list`).
-2. When the sources arrive: `node plan.mjs`, `node render.mjs`,
+1. When the sources arrive: `node plan.mjs`, `node render.mjs`,
    `node queue.mjs review`, show Sam out/review.html, adjust start/focus/fit/
    hold, then `node queue.mjs upload`.
