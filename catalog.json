@@ -186,5 +186,82 @@
     "made": "The fire and the crickets are real field recordings. The night sky's motion and the firelight are animated.",
     "hooks": ["A campfire under the Milky Way", "Stargazing in Joshua Tree, nine hours", "Sound on: crickets and a campfire"],
     "tags": ["#joshuatree", "#stargazing", "#campfiresounds", "#milkyway", "#sleepsounds"]
+  },
+  "Z0W-MjDr2cw": {
+    "short": "Tree frogs at Fisher Pond",
+    "place": "Fisher Pond",
+    "region": null,
+    "hours": 9,
+    "sounds": "a Pacific tree frog chorus, evening birds, light rain and a fire pit",
+    "onSite": false,
+    "made": "Built from my own photo of the pond, with parts of the scene animated.",
+    "hooks": ["Pacific tree frogs at dusk", "Can't sleep? Nine hours of frogs and fire", "Sound on: a frog chorus by the lake"],
+    "tags": ["#frogsounds", "#nightambience", "#lakesideambience", "#firepit", "#sleepsounds"]
+  },
+  "LbVCwLcFBV0": {
+    "short": "Rain in the Hoh Rainforest",
+    "place": "The Hoh Rainforest",
+    "region": "Washington",
+    "hours": 9,
+    "sounds": "steady rainforest rain and a crackling fireplace",
+    "onSite": false,
+    "made": "Inspired by the Hoh Rainforest. The glass-walled room is imagined.",
+    "hooks": ["Rain in the Hoh Rainforest", "Twelve feet of rain a year, and a fire", "Can't sleep? Nine hours of rainforest rain"],
+    "tags": ["#hohrainforest", "#rainsounds", "#fireplacesounds", "#rainforest", "#sleepsounds"]
+  },
+  "Cukxb8epBws": {
+    "short": "A forest river camp",
+    "place": "A forest river camp",
+    "region": null,
+    "hours": 9,
+    "sounds": "a flowing river and a crackling campfire",
+    "onSite": true,
+    "made": "Real footage, with the river and the fire recorded on location. Small details are added to the camp.",
+    "hooks": ["I recorded this river and this fire", "Sound on: a river at night", "A fire by the river, nine hours"],
+    "tags": ["#riversounds", "#campfiresounds", "#forestcamp", "#nightambience", "#sleepsounds"]
+  },
+  "1-6DCrkii30": {
+    "short": "Palisades Creek morning",
+    "place": "Palisades Creek",
+    "region": null,
+    "hours": 9,
+    "sounds": "a creek in spring runoff, a soft breeze and a firepit",
+    "onSite": false,
+    "made": "Built from my own photo of the creek. The leaves and morning light are enhanced.",
+    "hooks": ["A spring morning at Palisades Creek", "Sound on: a creek in spring runoff", "Put this on while you work"],
+    "tags": ["#creeksounds", "#springmorning", "#campfire", "#natureasmr", "#focusmusic"]
+  },
+  "ppIA-0nR2uc": {
+    "short": "Skagit Valley tulips",
+    "place": "The Skagit Valley tulip fields",
+    "region": "Washington",
+    "hours": 9,
+    "sounds": "birdsong, outdoor ambience and a warm firepit",
+    "onSite": false,
+    "made": "Built from my own photo of the tulip fields and Mount Baker. The windmill, steam and flames are animated.",
+    "hooks": ["Coffee by the tulip fields", "Tulip season under Mount Baker", "Put this on while you work"],
+    "tags": ["#skagitvalley", "#tulipfestival", "#springambience", "#mountbaker", "#coffeeambience"]
+  },
+  "G2GQ5mhpUWY": {
+    "short": "A cherry blossom garden",
+    "place": "A Japanese cherry blossom garden",
+    "region": null,
+    "hours": 9,
+    "sounds": "a crackling fire, wind in the petals and birdsong",
+    "onSite": true,
+    "made": "The sound is my own field recording from a cherry blossom garden. The visuals are AI-generated from my photo.",
+    "hooks": ["Watch for the hummingbird", "Cherry blossoms and a crackling fire", "Sound on: a spring garden"],
+    "tags": ["#cherryblossom", "#springambience", "#birdsong", "#fireplacesounds", "#studyambience"]
+  },
+  "baWJQgAw5Ss": {
+    "short": "A Cascades cabin in spring",
+    "place": "Above Reflection Lake",
+    "region": "the Cascades",
+    "hours": 9,
+    "sounds": "a crackling fireplace, birdsong and a spring meadow breeze",
+    "onSite": false,
+    "made": "The mountain view is above Reflection Lake. The cabin is imagined.",
+    "hooks": ["A cabin door open to a spring meadow", "Sound on: fire and birdsong", "Put this on while you read"],
+    "tags": ["#cozycabin", "#springmeadow", "#fireplacesounds", "#cascades", "#relaxingsounds"]
   }
 }

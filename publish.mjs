@@ -26,7 +26,7 @@ const API = 'https://graph.instagram.com/v23.0';
 const TOKEN = process.env.IG_ACCESS_TOKEN;
 const MODE = process.env.MODE || 'publish';
 const REPO = process.env.GITHUB_REPOSITORY;
-const MIN_GAP_HOURS = 18;  // never two Reels in one evening, even if a run is retried
+const MIN_GAP_HOURS = 8;   // two Reels a day (morning and evening), never two in one sitting
 const RATE_LIMIT = new Set([4, 9, 17, 32, 613]);
 const BLOCKED = new Set([368, 190, 10, 200]);
 
@@ -123,7 +123,7 @@ async function main() {
   if (!next) { console.log('Nothing rendered and waiting. Render more with render.mjs and upload with queue.mjs.'); return; }
 
   const last = posted.map((d) => Date.parse(d.at)).sort().pop();
-  if (last && Date.now() - last < MIN_GAP_HOURS * 3600e3) { console.log('A Reel already went out in the last 18 hours.'); process.exit(75); }
+  if (last && Date.now() - last < MIN_GAP_HOURS * 3600e3) { console.log('A Reel already went out in the last 8 hours.'); process.exit(75); }
 
   const v = videos[next.video];
   const caption = captionFor(next, v);

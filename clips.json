@@ -136,6 +136,62 @@
     "fit": "full"
   },
   {
+    "id": "Z0W-MjDr2cw-1",
+    "video": "Z0W-MjDr2cw",
+    "hook": "Pacific tree frogs at dusk",
+    "start": null,
+    "focus": 0.5,
+    "fit": "full"
+  },
+  {
+    "id": "LbVCwLcFBV0-1",
+    "video": "LbVCwLcFBV0",
+    "hook": "Rain in the Hoh Rainforest",
+    "start": null,
+    "focus": 0.5,
+    "fit": "full"
+  },
+  {
+    "id": "Cukxb8epBws-1",
+    "video": "Cukxb8epBws",
+    "hook": "I recorded this river and this fire",
+    "start": null,
+    "focus": 0.5,
+    "fit": "full"
+  },
+  {
+    "id": "1-6DCrkii30-1",
+    "video": "1-6DCrkii30",
+    "hook": "A spring morning at Palisades Creek",
+    "start": null,
+    "focus": 0.5,
+    "fit": "full"
+  },
+  {
+    "id": "ppIA-0nR2uc-1",
+    "video": "ppIA-0nR2uc",
+    "hook": "Coffee by the tulip fields",
+    "start": null,
+    "focus": 0.5,
+    "fit": "full"
+  },
+  {
+    "id": "G2GQ5mhpUWY-1",
+    "video": "G2GQ5mhpUWY",
+    "hook": "Watch for the hummingbird",
+    "start": null,
+    "focus": 0.5,
+    "fit": "full"
+  },
+  {
+    "id": "baWJQgAw5Ss-1",
+    "video": "baWJQgAw5Ss",
+    "hook": "A cabin door open to a spring meadow",
+    "start": null,
+    "focus": 0.5,
+    "fit": "full"
+  },
+  {
     "id": "o5rIMjVFMmw-2",
     "video": "o5rIMjVFMmw",
     "hook": "Sound on: Fall Creek Falls",
@@ -272,6 +328,62 @@
     "fit": "full"
   },
   {
+    "id": "Z0W-MjDr2cw-2",
+    "video": "Z0W-MjDr2cw",
+    "hook": "Can't sleep? Nine hours of frogs and fire",
+    "start": null,
+    "focus": 0.5,
+    "fit": "full"
+  },
+  {
+    "id": "LbVCwLcFBV0-2",
+    "video": "LbVCwLcFBV0",
+    "hook": "Twelve feet of rain a year, and a fire",
+    "start": null,
+    "focus": 0.5,
+    "fit": "full"
+  },
+  {
+    "id": "Cukxb8epBws-2",
+    "video": "Cukxb8epBws",
+    "hook": "Sound on: a river at night",
+    "start": null,
+    "focus": 0.5,
+    "fit": "full"
+  },
+  {
+    "id": "1-6DCrkii30-2",
+    "video": "1-6DCrkii30",
+    "hook": "Sound on: a creek in spring runoff",
+    "start": null,
+    "focus": 0.5,
+    "fit": "full"
+  },
+  {
+    "id": "ppIA-0nR2uc-2",
+    "video": "ppIA-0nR2uc",
+    "hook": "Tulip season under Mount Baker",
+    "start": null,
+    "focus": 0.5,
+    "fit": "full"
+  },
+  {
+    "id": "G2GQ5mhpUWY-2",
+    "video": "G2GQ5mhpUWY",
+    "hook": "Cherry blossoms and a crackling fire",
+    "start": null,
+    "focus": 0.5,
+    "fit": "full"
+  },
+  {
+    "id": "baWJQgAw5Ss-2",
+    "video": "baWJQgAw5Ss",
+    "hook": "Sound on: fire and birdsong",
+    "start": null,
+    "focus": 0.5,
+    "fit": "full"
+  },
+  {
     "id": "o5rIMjVFMmw-3",
     "video": "o5rIMjVFMmw",
     "hook": "A gazebo, a fire, a waterfall",
@@ -403,6 +515,62 @@
     "id": "oBeHCs9fbwE-3",
     "video": "oBeHCs9fbwE",
     "hook": "Sound on: crickets and a campfire",
+    "start": null,
+    "focus": 0.5,
+    "fit": "full"
+  },
+  {
+    "id": "Z0W-MjDr2cw-3",
+    "video": "Z0W-MjDr2cw",
+    "hook": "Sound on: a frog chorus by the lake",
+    "start": null,
+    "focus": 0.5,
+    "fit": "full"
+  },
+  {
+    "id": "LbVCwLcFBV0-3",
+    "video": "LbVCwLcFBV0",
+    "hook": "Can't sleep? Nine hours of rainforest rain",
+    "start": null,
+    "focus": 0.5,
+    "fit": "full"
+  },
+  {
+    "id": "Cukxb8epBws-3",
+    "video": "Cukxb8epBws",
+    "hook": "A fire by the river, nine hours",
+    "start": null,
+    "focus": 0.5,
+    "fit": "full"
+  },
+  {
+    "id": "1-6DCrkii30-3",
+    "video": "1-6DCrkii30",
+    "hook": "Put this on while you work",
+    "start": null,
+    "focus": 0.5,
+    "fit": "full"
+  },
+  {
+    "id": "ppIA-0nR2uc-3",
+    "video": "ppIA-0nR2uc",
+    "hook": "Put this on while you work",
+    "start": null,
+    "focus": 0.5,
+    "fit": "full"
+  },
+  {
+    "id": "G2GQ5mhpUWY-3",
+    "video": "G2GQ5mhpUWY",
+    "hook": "Sound on: a spring garden",
+    "start": null,
+    "focus": 0.5,
+    "fit": "full"
+  },
+  {
+    "id": "baWJQgAw5Ss-3",
+    "video": "baWJQgAw5Ss",
+    "hook": "Put this on while you read",
     "start": null,
     "focus": 0.5,
     "fit": "full"
