@@ -48,9 +48,14 @@ async function api(path, { method = 'GET', params = {} } = {}) {
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
-/** Names of the videos uploaded to the queue release. */
+/** Names of the videos uploaded to the queue release (none before the first upload). */
 function queued() {
-  const out = execFileSync('gh', ['release', 'view', 'queue', '--repo', REPO, '--json', 'assets', '--jq', '.assets[].name']).toString();
+  let out = '';
+  try {
+    out = execFileSync('gh', ['release', 'view', 'queue', '--repo', REPO, '--json', 'assets', '--jq', '.assets[].name'], { stdio: ['ignore', 'pipe', 'pipe'] }).toString();
+  } catch (err) {
+    if (!/release not found/.test(String(err.stderr))) throw err;
+  }
   return new Set(out.split('\n').filter((n) => n.endsWith('.mp4')).map((n) => n.slice(0, -4)));
 }
 

@@ -68,7 +68,12 @@ async function main() {
   const videos = catalog();
   const clips = JSON.parse(readFileSync('clips.json', 'utf8'));
   const done = existsSync('shorts.json') ? JSON.parse(readFileSync('shorts.json', 'utf8')) : {};
-  const out = execFileSync('gh', ['release', 'view', 'queue', '--repo', REPO, '--json', 'assets', '--jq', '.assets[].name']).toString();
+  let out = '';
+  try {
+    out = execFileSync('gh', ['release', 'view', 'queue', '--repo', REPO, '--json', 'assets', '--jq', '.assets[].name'], { stdio: ['ignore', 'pipe', 'pipe'] }).toString();
+  } catch (err) {
+    if (!/release not found/.test(String(err.stderr))) throw err;
+  }
   const inQueue = new Set(out.split('\n').filter((n) => n.endsWith('.mp4')).map((n) => n.slice(0, -4)));
   const next = clips.find((c) => !c.hold && inQueue.has(c.id) && (!done[c.id] || done[c.id].status === 'failed'));
   console.log(`Next Short: ${next ? `${next.id} "${next.hook}"` : 'nothing queued'}.`);
