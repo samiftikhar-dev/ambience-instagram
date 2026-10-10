@@ -1,0 +1,55 @@
+# Ambience Instagram: how a Claude session works here
+
+Instagram Reels for Sam's father-in-law's YouTube channel,
+youtube.com/@theambienceexperience (channel id UCwysoW8U7j4eWShR09rhd3A).
+Unrelated to Schedulign. README.md has the pipeline; this file has the state
+and the rules.
+
+## Rules
+
+- Every fact a post states comes from catalog.json, written only from his own
+  YouTube descriptions. "I recorded this" only where `onSite` is true. Every
+  caption carries the `made` line (what is real, what was added with AI).
+- Nothing posts that Sam has not seen on out/review.html.
+- At most one Reel a day. LuxyBasement's Meta app was blocked at about 57
+  posts a day.
+- Never automate comments on other people's posts (Instagram forbids it).
+  Replies on his own posts and a daily hand-posted comment list are fine.
+- Never ask for or repeat a token in chat; secrets go in with `gh secret set`
+  or the GitHub secrets page.
+- Sam ruled out Metricool (Oct 9 2026): everything runs as code in GitHub Actions.
+- On Windows, write files with the Write tool, not bash heredocs or `node -e`
+  with backticks (a backtick ran a README command on Oct 9).
+
+## State (Oct 9 2026)
+
+- Instagram: @the.ambience.experience (email theambienceexp@gmail.com, name
+  "The Ambience Experience", bio and profile picture set from brand/).
+- Meta app AutoPosterTAE (app id 1808192427042708, Instagram app id
+  4328569424032206), development mode, admin = Waid Louie's Facebook account.
+  Permissions added: instagram_business_basic, _content_publish,
+  _manage_comments, _manage_insights. Basic settings: PRIVACY.md links,
+  category Entertainment, contact theambienceexp@gmail.com. App icon still
+  to upload (brand/app-icon-1024.jpg).
+- WAITING ON SAM: add the.ambience.experience as an **Instagram Tester** (not
+  "Tester", which looks for a Facebook user), accept it at
+  instagram.com/accounts/manage_access, generate the token, store it as the
+  IG_ACCESS_TOKEN repository secret, then run "Post a Reel" with mode check.
+  Claude Code's auto mode refuses to grant app roles; Sam clicks those.
+- WAITING ON HIM: source videos named <youtubeId>.mp4 into sources/. Nothing
+  is rendered yet (tested only on a synthetic pattern).
+- Token lasts 60 days: renew around Nov 28 2026.
+- YouTube Shorts: built (youtube.mjs, shorts.yml, yt-auth.mjs) but PARKED and
+  the workflow disabled (Sam: Instagram first). Uploads from an unaudited
+  Google project are forced private until the YouTube API audit passes.
+- Not built yet: auto-replies to factual questions on his posts; the daily
+  hand-posted comment list (model: C:\Users\samif\luxybasement-engagement and
+  the luxybasement-daily-comment-list scheduled task).
+
+## Next session
+
+1. Ask whether the token is stored; run the check workflow
+   (`gh workflow run publish.yml -f mode=check`, then `gh run list`).
+2. When the sources arrive: `node plan.mjs`, `node render.mjs`,
+   `node queue.mjs review`, show Sam out/review.html, adjust start/focus/fit/
+   hold, then `node queue.mjs upload`.
