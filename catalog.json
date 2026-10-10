@@ -153,5 +153,38 @@
     "made": "The rain is a real recording of heavy rainfall. The visuals are enhanced and animated.",
     "hooks": ["Can't sleep? Kauai rain for nine hours", "Sound on: real tropical rain", "A rainy afternoon on Kauai"],
     "tags": ["#rainsounds", "#kauai", "#tropicalrain", "#sleepsounds", "#rainambience"]
+  },
+  "qFIUSfn6lhs": {
+    "short": "A rainy PNW cabin",
+    "place": "A Pacific Northwest lake cabin",
+    "region": null,
+    "hours": 9,
+    "sounds": "steady winter rain and a crackling fireplace",
+    "onSite": false,
+    "made": "Built from my own photos with AI-generated clips. All the sound is my own original recording.",
+    "hooks": ["Winter rain on a cabin deck", "Can't sleep? Nine hours of this rain", "Sound on: rain and a fireplace"],
+    "tags": ["#rainsounds", "#cabinambience", "#cozyrain", "#pnw", "#sleepsounds"]
+  },
+  "V63ZKoDurZ0": {
+    "short": "A creek-side cabin at sunrise",
+    "place": "A mountain creek cabin",
+    "region": null,
+    "hours": 9,
+    "sounds": "birdsong, a crackling fire, a hot tub and a rushing creek",
+    "onSite": false,
+    "made": "Inspired by my own nature photography and brought to life with AI-assisted animation. The sound is real field recordings.",
+    "hooks": ["Sunrise from a hot tub by the creek", "Sound on: a creek in spring runoff", "Nine hours of a mountain morning"],
+    "tags": ["#creeksounds", "#cabinambience", "#birdsong", "#mountainmorning", "#natureasmr"]
+  },
+  "oBeHCs9fbwE": {
+    "short": "Joshua Tree at night",
+    "place": "Hidden Valley, Joshua Tree",
+    "region": "California",
+    "hours": 9,
+    "sounds": "a campfire and crickets",
+    "onSite": false,
+    "made": "The fire and the crickets are real field recordings. The night sky's motion and the firelight are animated.",
+    "hooks": ["A campfire under the Milky Way", "Stargazing in Joshua Tree, nine hours", "Sound on: crickets and a campfire"],
+    "tags": ["#joshuatree", "#stargazing", "#campfiresounds", "#milkyway", "#sleepsounds"]
   }
 }
