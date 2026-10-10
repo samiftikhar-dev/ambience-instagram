@@ -37,12 +37,15 @@ and the rules.
 - Nothing posts unless a Reel is approved on the review page (collection
   `approvals`); there is no default-approve.
 - Each Reel pops up "Full video on YouTube · link in bio" at 6 seconds.
-  Instagram's API cannot attach links or stickers to a Reel, so the bio link is
-  docs/index.html (node hub.mjs), a page of every video with its YouTube link.
-  GitHub Pages is NOT switched on until Sam says so.
-- The live Reels o5rIMjVFMmw-1 (said "at night") and 8a97ygxGfss-1 ("from a
-  desert shelter") carry wrong claims; Sam deletes them in the Instagram app
-  (the API cannot), then clear their entries from published.json.
+  Instagram's API cannot attach links or stickers to a Reel. A page listing
+  every video (docs/index.html, node hub.mjs) was built but Sam SKIPPED it
+  (Oct 10): GitHub Pages would show his username in the bio address. The bio
+  link stays youtube.com/@theambienceexperience and each caption names the
+  exact video to look for. A custom domain would revive the page.
+- Sam deleted all three live Reels in the Instagram app on Oct 10 and
+  published.json is cleared. Posting is paused; nothing is in the queue release
+  (it is recreated by node queue.mjs upload, only for approved Reels whose
+  video's facts are confirmed).
 
 ## Strategy (Sam, Oct 10 2026)
 
