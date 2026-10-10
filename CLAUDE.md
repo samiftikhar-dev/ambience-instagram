@@ -38,7 +38,7 @@ and the rules.
   deleted on Oct 10. Mackenzie posts them by hand.
 - PAUSED Oct 10 2026 (Sam: "we need to review and change some content"):
   publish.yml disabled, the launch task deleted. 3 Reels are live
-  (o5rIMjVFMmw-1, qFIUSfn6lhs-1, V63ZKoDurZ0-1; see published.json).
+  (o5rIMjVFMmw-1, 8a97ygxGfss-1, ERo2kfGJJXA-1; see published.json).
   Re-enable with `gh workflow enable publish.yml` only when Sam says so.
 - Posting: 5 a day (8am, 11am, 2pm, 5pm, 8:30pm Pacific), never 11pm-7am
   unless a hand-started burst sets anytime. First Reel live Oct 10 07:37 UTC
