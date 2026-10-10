@@ -35,9 +35,9 @@
     "id": "NcEmJ5Z52to-1",
     "video": "NcEmJ5Z52to",
     "hook": "I filmed this at Grassi Lakes",
-    "start": null,
+    "start": 10,
     "focus": 0.5,
-    "fit": null
+    "fit": "full"
   },
   {
     "id": "aTX1B8qvLdU-1",
@@ -147,9 +147,9 @@
     "id": "NcEmJ5Z52to-2",
     "video": "NcEmJ5Z52to",
     "hook": "Sound on: a turquoise lake in the Rockies",
-    "start": null,
+    "start": 46,
     "focus": 0.5,
-    "fit": null
+    "fit": "full"
   },
   {
     "id": "aTX1B8qvLdU-2",
@@ -259,9 +259,9 @@
     "id": "NcEmJ5Z52to-3",
     "video": "NcEmJ5Z52to",
     "hook": "Inside the tent, nine hours",
-    "start": null,
+    "start": 82,
     "focus": 0.5,
-    "fit": null
+    "fit": "full"
   },
   {
     "id": "aTX1B8qvLdU-3",

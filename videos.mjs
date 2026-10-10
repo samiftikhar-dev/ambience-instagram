@@ -41,4 +41,4 @@ async function main() {
   console.log(`videos.json: ${Object.keys(known).length} videos (${added} new).`);
 }
 
-if (import.meta.url === `file:///${process.argv[1].replace(/\\/g, '/')}`) main();
+if (process.argv[1] && import.meta.url === `file:///${process.argv[1].replace(/\\/g, '/')}`) main();

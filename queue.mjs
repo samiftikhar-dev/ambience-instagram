@@ -48,4 +48,5 @@ function upload() {
   console.log(`Uploaded ${files.length} Reels to the queue release.`);
 }
 
-({ review, upload })[process.argv[2]]?.() ?? console.log('Usage: node queue.mjs review | upload');
+const job = { review, upload }[process.argv[2]];
+if (job) job(); else console.log('Usage: node queue.mjs review | upload');

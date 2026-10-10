@@ -148,4 +148,4 @@ function main() {
   if (failed) process.exitCode = 1;
 }
 
-if (import.meta.url === `file:///${process.argv[1].replace(/\\/g, '/')}`) main();
+if (process.argv[1] && import.meta.url === `file:///${process.argv[1].replace(/\\/g, '/')}`) main();
