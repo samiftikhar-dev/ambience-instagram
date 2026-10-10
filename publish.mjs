@@ -135,7 +135,8 @@ async function main() {
   // Never overnight, Pacific time, whatever starts the run: night posts reach
   // nobody and read as a bot.
   const hour = Number(new Intl.DateTimeFormat('en-US', { timeZone: 'America/Los_Angeles', hour: 'numeric', hourCycle: 'h23' }).format(new Date()));
-  if (hour < 7 || hour >= 23) { console.log(`It is ${hour}:00 in Pacific time; Reels post between 7am and 11pm.`); process.exit(75); }
+  // ALLOW_NIGHT is set only by a burst Sam asks for by hand ("anytime").
+  if ((hour < 7 || hour >= 23) && process.env.ALLOW_NIGHT !== '1') { console.log(`It is ${hour}:00 in Pacific time; Reels post between 7am and 11pm.`); process.exit(75); }
 
   const last = posted.map((d) => Date.parse(d.at)).sort().pop();
   if (last && Date.now() - last < MIN_GAP_HOURS * 3600e3) { console.log('A Reel went out too recently; waiting for the next slot.'); process.exit(75); }

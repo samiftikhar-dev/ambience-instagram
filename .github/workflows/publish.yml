@@ -28,6 +28,10 @@ on:
       spacing:
         description: 'burst: minutes between Reels (30 at least)'
         default: '35'
+      anytime:
+        description: 'burst: also post between 11pm and 7am Pacific'
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -71,6 +75,7 @@ jobs:
           if [ "$INPUT_MODE" = burst ]; then
             n=$COUNT; gap=$SPACING; [ "$gap" -lt 30 ] && gap=30
             export MODE=publish MIN_GAP_HOURS=0
+            [ "${{ github.event.inputs.anytime }}" = true ] && export ALLOW_NIGHT=1
           else
             n=1; gap=0; export MODE=$INPUT_MODE
           fi
