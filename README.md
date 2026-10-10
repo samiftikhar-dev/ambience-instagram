@@ -13,7 +13,7 @@ and each caption carries the line saying what is real and what was added.
 
 | Step | Who | What |
 | --- | --- | --- |
-| 1 | him | Drop the finished video (or its source loop) into the shared folder, named after its YouTube id, e.g. `ERo2kfGJJXA.mp4` |
+| 1 | him or Sam | Drop the video (any length or format) into sources/; `node trim.mjs --delete` shrinks a full download to a 3-minute piece; name it after its YouTube id, e.g. `ERo2kfGJJXA.mp4` |
 | 2 | `node videos.mjs` | Reads the channel's public feed for titles and descriptions |
 | 3 | a person, once per video | Add the video to `catalog.json`: place, sounds, what is real, three hooks |
 | 4 | `node plan.mjs` | Three clips per video, scenes taking turns, best-liked first |
