@@ -28,15 +28,41 @@ export const placeLine = (v) => [v.place, v.region].filter(Boolean).join(', ');
  */
 const ABOUT = "I'm Bob. After a long career as an engineer I retired and found a new passion: exploring real places, recording their sounds and turning my photographs and footage into ambience scenes.";
 
+const STOP = new Set('i the a an at in of and my me we this that is was were to for on by with it its you ll no from as or are be there here'.split(' '));
+const words = (s) => new Set(s.toLowerCase().replace(/[^a-z0-9 ]/g, ' ').split(/\s+/).filter((w) => w && !STOP.has(w)));
+/** Share of the shorter text's words that the other one also has (0 to 1). */
+export function overlap(a, b) {
+  const A = words(a), B = words(b);
+  if (!A.size || !B.size) return 0;
+  let n = 0;
+  for (const w of A) if (B.has(w)) n++;
+  return n / Math.min(A.size, B.size);
+}
+const firstSentence = (s) => s.split(/(?<=[.!?]) /)[0];
+
+/**
+ * The lines of a caption that say what the Reel is about: the opening line, the
+ * place (only when neither the opening line nor the made line already names it),
+ * the made line and the sound line. Mackenzie (Oct 10): the first two lines
+ * must never repeat each other.
+ */
+function bodyLines(clip, v) {
+  const hook = `${clip.hook}.`.replace(/([.?!])\.$/, '$1');
+  const said = `${clip.hook} ${v.made}`;
+  const showPlace = !v.anon && overlap(v.place, said) < 0.6;
+  return { hook, place: showPlace ? `${placeLine(v)}.` : null, made: v.made, hear: `You'll hear ${v.sounds}. No music.` };
+}
+
 /** Mackenzie's note (Oct 10): a place followed by a colon reads as clunky, so every line is a sentence. */
 export function captionFor(clip, v) {
   const first = /-1$/.test(clip.id);
+  const b = bodyLines(clip, v);
   const lines = [
-    `${clip.hook}.`.replace(/([.?!])\.$/, '$1'),
+    b.hook,
     '',
-    `${placeLine(v)}.`,
-    v.made,
-    `You'll hear ${v.sounds}. No music.`,
+    ...(b.place ? [b.place] : []),
+    b.made,
+    b.hear,
     '',
     first ? ABOUT : '— Bob',
     '',
@@ -67,6 +93,16 @@ export function lintCaption(text, v) {
   if (tags.length > 5) problems.push(`${tags.length} hashtags (5 at most)`);
   if (text.length > 2200) problems.push('longer than Instagram allows');
   if (!v.made) problems.push('no line saying what is real and what was added');
+  // No two of the opening lines may say the same thing (Mackenzie, Oct 10).
+  // Only the lines that describe the Reel, up to the sign-off (the "Find the full
+  // video" line names the video's own title, so it echoes the opening on purpose).
+  const all = text.split('\n').filter(Boolean);
+  const end = all.findIndex((l) => l.startsWith("I'm Bob") || l.startsWith('— Bob'));
+  const tops = all.slice(0, end < 0 ? 4 : end);
+  for (let i = 0; i < tops.length; i++) for (let j = i + 1; j < tops.length; j++) {
+    const o = overlap(firstSentence(tops[i]), firstSentence(tops[j]));
+    if (o >= 0.6) problems.push(`lines repeat each other (${o.toFixed(2)}): "${firstSentence(tops[i])}" / "${firstSentence(tops[j])}"`);
+  }
   return problems;
 }
 

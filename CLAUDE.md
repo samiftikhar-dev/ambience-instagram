@@ -32,6 +32,12 @@ and the rules.
   "Facts to confirm" tab are uploaded to the queue.
 - Wording: no "place: sounds" colon lines, no hooks with colons, no repeated
   "Sound on:" openers, "Pacific Northwest" at most once (lib.mjs lint).
+- No repeated lines: the opening line, the place line, the made line and the
+  sound line must not say the same thing (Sam, Oct 10: "the first two lines
+  repeating themselves"). captionFor drops the place line when the hook or
+  made line already names it (and `anon: true` places never get one); lintCaption
+  refuses a caption whose lines overlap 60% or more. Hooks must not just list
+  the sounds the caption lists next.
 - The details she loves (the fly fisherman, the hummingbird) lead the hooks.
 - Newest upload first (Autumn Falls); plan.mjs puts it at the front.
 - Nothing posts unless a Reel is approved on the review page (collection
