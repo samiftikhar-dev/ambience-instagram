@@ -1,19 +1,33 @@
 name: Post a Reel
 
-# Two Reels a day: about 9:30am Pacific in daylight time (people working or
-# reading) and 8:30pm (winding down); an hour earlier in winter. GitHub can start
-# scheduled runs late; publish.mjs keeps 8 hours between Reels.
+# Five Reels a day (Sam, Oct 10 2026), Pacific daylight time (an hour earlier
+# in winter): 8am and 11am for people working or reading, 2pm, 5pm, and 8:30pm
+# for winding down. GitHub can start scheduled runs late; publish.mjs keeps
+# at least 2.5 hours between Reels.
+#
+# Run by hand with mode "burst" to post several, spaced out (the launch post
+# the first 10 about 35 minutes apart: never many in one hour, which is what
+# got the LuxyBasement app blocked).
 on:
   schedule:
-    - cron: '30 16 * * *'
+    - cron: '0 15 * * *'
+    - cron: '0 18 * * *'
+    - cron: '0 21 * * *'
+    - cron: '0 0 * * *'
     - cron: '30 3 * * *'
   workflow_dispatch:
     inputs:
       mode:
-        description: 'check = report only; publish = post the next Reel now'
+        description: 'check = report only; publish = post the next Reel now; burst = post several, spaced out'
         type: choice
-        options: [check, publish]
+        options: [check, publish, burst]
         default: check
+      count:
+        description: 'burst: how many Reels'
+        default: '10'
+      spacing:
+        description: 'burst: minutes between Reels (30 at least)'
+        default: '35'
 
 permissions:
   contents: write
@@ -25,7 +39,7 @@ concurrency:
 jobs:
   post:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 350
     steps:
       - uses: actions/checkout@v4
         with:
@@ -48,20 +62,34 @@ jobs:
         env:
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
           GH_TOKEN: ${{ github.token }}
-          MODE: ${{ github.event.inputs.mode || 'publish' }}
+          INPUT_MODE: ${{ github.event.inputs.mode || 'publish' }}
+          COUNT: ${{ github.event.inputs.count || '1' }}
+          SPACING: ${{ github.event.inputs.spacing || '35' }}
         run: |
-          rc=0; node publish.mjs || rc=$?
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          if [ "$rc" = 76 ]; then
-            printf 'Instagram refused on %s (token expired, or Meta restricted the app). Renew the token, then delete this file.\n' "$(date -u +%FT%TZ)" > blocked.txt
-            git add blocked.txt
+          if [ "$INPUT_MODE" = burst ]; then
+            n=$COUNT; gap=$SPACING; [ "$gap" -lt 30 ] && gap=30
+            export MODE=publish MIN_GAP_HOURS=0
+          else
+            n=1; gap=0; export MODE=$INPUT_MODE
           fi
-          [ -f published.json ] && git add published.json
-          if ! git diff --cached --quiet; then
-            git commit -qm "Record Reel"
-            git pull -q --rebase
-            git push -q
-          fi
+          rc=0
+          for i in $(seq 1 "$n"); do
+            rc=0; node publish.mjs || rc=$?
+            if [ "$rc" = 76 ]; then
+              printf 'Instagram refused on %s (token expired, or Meta restricted the app). Renew the token, then delete this file.\n' "$(date -u +%FT%TZ)" > blocked.txt
+              git add blocked.txt
+            fi
+            [ -f published.json ] && git add published.json
+            if ! git diff --cached --quiet; then
+              git commit -qm "Record Reel"
+              git pull -q --rebase
+              git push -q
+            fi
+            # Stop the burst on a block, a quota pause or a failure.
+            [ "$rc" = 0 ] || break
+            [ "$i" -lt "$n" ] && sleep $((gap * 60))
+          done
           [ "$rc" = 75 ] && rc=0
           exit $rc
