@@ -26,7 +26,7 @@ export function captionFor(clip, v) {
     `${placeLine(v)}: ${v.sounds}, with no music.`,
     v.made,
     '',
-    `The full ${hoursWord(v.hours)}-hour version is on YouTube. Link in bio.`,
+    `The full ${hoursWord(v.hours)}-hour version is on YouTube at The Ambience Experience. Link in bio.`,
     '',
     v.tags.slice(0, 5).join(' '),
   ];

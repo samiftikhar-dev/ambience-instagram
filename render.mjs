@@ -85,7 +85,12 @@ export function renderClip(clip, v, outDir = 'out') {
   const hookLines = wrap(clip.hook, 18);
   // The full layout's frame starts about 656px down; keep the place line clear of it.
   const top = clip.fit === 'full' ? 230 : 300;
+  // The channel's name stays on for the whole clip (so the loop has no jump),
+  // in the blurred band under the frame, above where Instagram draws the caption.
+  const brandY = clip.fit === 'crop' ? 1340 : 1310;
   const overlays = [
+    text(dir, 'brand', spaced('The Ambience Experience'), { font: SANS, size: 32, y: brandY, alpha: '0.92' }),
+    text(dir, 'tagline', 'real places · real sound', { font: SERIF, size: 34, y: brandY + 56, alpha: '0.75' }),
     ...hookLines.map((line, i) => text(dir, `h${i}`, line, { font: SERIF, size: 78, y: top + i * 96, alpha: HOOK_ALPHA })),
     text(dir, 'place', spaced(v.short), { font: SANS, size: 30, y: top + hookLines.length * 96 + 40, alpha: HOOK_ALPHA }),
   ];
