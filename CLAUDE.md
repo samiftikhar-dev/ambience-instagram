@@ -21,6 +21,26 @@ and the rules.
 - On Windows, write files with the Write tool, not bash heredocs or `node -e`
   with backticks (a backtick ran a README command on Oct 9).
 
+## Strategy (Sam, Oct 10 2026)
+
+- Voice: Bob, first person. First Reel per video carries the about line in
+  lib.mjs (long engineering career, retired, records and shoots it himself);
+  the rest sign "— Bob". Never his former employer (lint refuses "Boeing").
+- Goal: YouTube growth; every caption points to the full video.
+- Audience: sleep and focus both; two Reels a day, ~9:30am and ~8:30pm Pacific.
+- Layout: whole frame on a blurred copy (fit "full"), channel name under it.
+- AI: one honest line per caption, never the headline.
+- Behind-the-scenes posts wait for photos of Bob recording (Sam will send).
+- Comments: daily list at 7am from the scheduled task
+  ambience-daily-comment-list (C:\Users\samif\.claude\scheduled-tasks),
+  written to C:\Users\samif\ambience-engagement\<date>.md; Mackenzie posts
+  them by hand.
+- Open with Bob: Pinnacle Peak (kSJ4KJAGqwI) credits audio to "Lance", so it
+  is left out of the catalog; "Johnsin Creek" spelling (V63ZKoDurZ0 is
+  captioned "a mountain creek cabin" until confirmed).
+- Sources so far are 2-minute 720p clips (the clip_<id>_0-120_*.mp4 names
+  Sam downloads); rename to <id>.mp4.
+
 ## State (Oct 9 2026)
 
 - Instagram: @the.ambience.experience (email theambienceexp@gmail.com, name
