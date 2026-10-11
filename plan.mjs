@@ -43,6 +43,9 @@ for (let k = 0; k < rounds; k++) {
     clips.push({ id: clipId, video: id, hook, start, focus: prior.focus ?? 0.5, fit, ...(prior.hold ? { hold: true } : {}) });
   }
 }
+// Mackenzie (Oct 10): videos already seen on Instagram once go way down, after
+// every other video's Reels (a stable sort keeps the order otherwise).
+clips.sort((a, b) => !!videos[a.video].posted - !!videos[b.video].posted);
 writeFileSync('clips.json', `${JSON.stringify(clips, null, 2)}\n`);
 const ready = clips.filter((c) => c.start != null).length;
 console.log(`clips.json: ${clips.length} clips from ${ids.length} videos; ${ready} have a source and a start time.`);

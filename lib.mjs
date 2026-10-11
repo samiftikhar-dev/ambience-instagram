@@ -99,6 +99,13 @@ export function lintCaption(text, v) {
   const all = text.split('\n').filter(Boolean);
   const end = all.findIndex((l) => l.startsWith("I'm Bob") || l.startsWith('— Bob'));
   const tops = all.slice(0, end < 0 ? 4 : end);
+  // Mackenzie (Oct 10): never call a recording a photograph, and never make the
+  // picture sound recorded when only the sound is. The catalog flags decide.
+  const said = tops.join(' ').toLowerCase();
+  if (tops.some((l) => l.includes(':'))) problems.push('a caption line has a colon (Mackenzie: every line is a plain sentence)');
+  if (/\bphoto/.test(said) && !v.photo) problems.push('says photo/photograph, but the picture is not known to be a photograph');
+  if (/\b(filmed|footage|video)\b/.test(said) && !v.footage) problems.push('says filmed/footage/video, but the picture is not known to be a recording');
+  if (/\bi recorded this\b/.test(said) && !v.footage) problems.push('says "I recorded this", which reads as the picture, but only the sound is a recording');
   for (let i = 0; i < tops.length; i++) for (let j = i + 1; j < tops.length; j++) {
     const o = overlap(firstSentence(tops[i]), firstSentence(tops[j]));
     if (o >= 0.6) problems.push(`lines repeat each other (${o.toFixed(2)}): "${firstSentence(tops[i])}" / "${firstSentence(tops[j])}"`);
@@ -110,6 +117,8 @@ export function lintHook(hook, v) {
   const problems = [];
   if (hook.length > 48) problems.push(`hook is ${hook.length} characters (48 at most)`);
   if (hook.includes(':')) problems.push('hook has a colon');
+  if (/\bphoto/i.test(hook) && !v.photo) problems.push('hook says photo, but the picture is not known to be a photograph');
+  if (/\b(i filmed|filmed this|footage|i recorded this)\b/i.test(hook) && !v.footage) problems.push('hook makes the picture sound recorded, but only the sound is');
   if (/\bi recorded this\b/i.test(hook) && !v.onSite) problems.push('hook says "I recorded this" but onSite is false');
   if (/\bnight\b/i.test(hook) && /fall creek/i.test(v.place)) problems.push('Fall Creek is not a night recording');
   return problems;

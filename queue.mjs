@@ -35,15 +35,22 @@ video{width:100%;aspect-ratio:9/16;background:#000;border-radius:10px}pre{white-
   console.log(`out/review.html: ${rendered.length} Reels.`);
 }
 
+/**
+ * Only Reels in approved.json go up: approved on the review page AND their
+ * video's facts confirmed there (Claude writes the file from the page's data
+ * when Sam says to resume). No file, nothing uploads.
+ */
 function upload() {
+  if (!existsSync('approved.json')) { console.log('approved.json is missing, so nothing is uploaded. It lists the Reels approved on the review page whose video facts are confirmed.'); return; }
+  const approved = new Set(JSON.parse(readFileSync('approved.json', 'utf8')));
   const repo = execFileSync('gh', ['repo', 'view', '--json', 'nameWithOwner', '--jq', '.nameWithOwner']).toString().trim();
   try {
     execFileSync('gh', ['release', 'view', 'queue', '--repo', repo], { stdio: 'ignore' });
   } catch {
     execFileSync('gh', ['release', 'create', 'queue', '--repo', repo, '--title', 'Reels waiting to post', '--notes', 'Rendered Reels. publish.mjs posts from here in clips.json order.']);
   }
-  const files = rendered.filter((c) => !c.hold).map((c) => `out/${c.id}.mp4`);
-  if (!files.length) { console.log('Nothing rendered to upload.'); return; }
+  const files = rendered.filter((c) => !c.hold && approved.has(c.id)).map((c) => `out/${c.id}.mp4`);
+  if (!files.length) { console.log('Nothing approved and rendered to upload.'); return; }
   execFileSync('gh', ['release', 'upload', 'queue', '--repo', repo, '--clobber', ...files], { stdio: 'inherit' });
   console.log(`Uploaded ${files.length} Reels to the queue release.`);
 }

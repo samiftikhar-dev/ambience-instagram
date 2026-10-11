@@ -32,6 +32,22 @@ and the rules.
   "Facts to confirm" tab are uploaded to the queue.
 - Wording: no "place: sounds" colon lines, no hooks with colons, no repeated
   "Sound on:" openers, "Pacific Northwest" at most once (lib.mjs lint).
+- Second round of notes (Oct 11): the picture is often a VIDEO recording, not
+  a photograph (Palisades Creek, Mount Rainier, Fall Creek), and for Kay Falls
+  only the sound is a recording while the picture is AI. So catalog.json has
+  `photo` and `footage` flags, and lintCaption/lintHook refuse "photo" unless
+  `photo`, refuse "filmed", "footage", "video" and "I recorded this" unless
+  `footage`, and refuse any colon in the describing lines. Never write
+  "photographs" for a video whose picture type is unknown; the placeholder
+  line is "The place and the sound are real, and AI helps shape the visuals."
+  (real first, AI second, Mackenzie on Broadway Cave).
+- Videos already seen on Instagram once (`posted: true`: Fall Creek, the desert
+  storm, Kay Falls) sort last in clips.json. The cherry blossom video is
+  removed entirely (Mackenzie's request); its source stays in sources/.
+- approved.json lists the Reels approved on the review page whose video facts
+  are confirmed; `node queue.mjs upload` uploads nothing else. Rewrite it from
+  the page's `approvals` and `facts` collections (ArtifactData) when Sam says
+  to resume posting. Facts statuses: ok, change, fixed (changed, look again).
 - No repeated lines: the opening line, the place line, the made line and the
   sound line must not say the same thing (Sam, Oct 10: "the first two lines
   repeating themselves"). captionFor drops the place line when the hook or

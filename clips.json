@@ -8,30 +8,6 @@
     "fit": "full"
   },
   {
-    "id": "o5rIMjVFMmw-1",
-    "video": "o5rIMjVFMmw",
-    "hook": "I recorded this waterfall at Fall Creek",
-    "start": 10,
-    "focus": 0.5,
-    "fit": "full"
-  },
-  {
-    "id": "8a97ygxGfss-1",
-    "video": "8a97ygxGfss",
-    "hook": "A monsoon storm over the Arizona desert",
-    "start": 10,
-    "focus": 0.5,
-    "fit": "full"
-  },
-  {
-    "id": "ERo2kfGJJXA-1",
-    "video": "ERo2kfGJJXA",
-    "hook": "I recorded this waterfall in British Columbia",
-    "start": 10,
-    "focus": 0.5,
-    "fit": "full"
-  },
-  {
     "id": "Ud9OamPfHJo-1",
     "video": "Ud9OamPfHJo",
     "hook": "A rainy afternoon on Kauai",
@@ -98,7 +74,7 @@
   {
     "id": "FUCjvCCEFz4-1",
     "video": "FUCjvCCEFz4",
-    "hook": "A campfire in a cave above Phoenix",
+    "hook": "A campfire in Broadway Cave, above Phoenix",
     "start": 10,
     "focus": 0.5,
     "fit": "full"
@@ -162,7 +138,7 @@
   {
     "id": "1-6DCrkii30-1",
     "video": "1-6DCrkii30",
-    "hook": "A spring morning at Palisades Creek",
+    "hook": "Start the day beside a rushing creek",
     "start": 10,
     "focus": 0.5,
     "fit": "full"
@@ -171,14 +147,6 @@
     "id": "ppIA-0nR2uc-1",
     "video": "ppIA-0nR2uc",
     "hook": "Coffee by the fire, tulips all around",
-    "start": 10,
-    "focus": 0.5,
-    "fit": "full"
-  },
-  {
-    "id": "G2GQ5mhpUWY-1",
-    "video": "G2GQ5mhpUWY",
-    "hook": "Watch for the hummingbird",
     "start": 10,
     "focus": 0.5,
     "fit": "full"
@@ -195,30 +163,6 @@
     "id": "GkS-f5JLaUE-2",
     "video": "GkS-f5JLaUE",
     "hook": "Fall color, a morning fire and a waterfall",
-    "start": 46,
-    "focus": 0.5,
-    "fit": "full"
-  },
-  {
-    "id": "o5rIMjVFMmw-2",
-    "video": "o5rIMjVFMmw",
-    "hook": "A gazebo, a fire and a waterfall",
-    "start": 46,
-    "focus": 0.5,
-    "fit": "full"
-  },
-  {
-    "id": "8a97ygxGfss-2",
-    "video": "8a97ygxGfss",
-    "hook": "Nearly 100 lightning strikes in one loop",
-    "start": 46,
-    "focus": 0.5,
-    "fit": "full"
-  },
-  {
-    "id": "ERo2kfGJJXA-2",
-    "video": "ERo2kfGJJXA",
-    "hook": "Nine hours in a timber cabin",
     "start": 46,
     "focus": 0.5,
     "fit": "full"
@@ -290,7 +234,7 @@
   {
     "id": "FUCjvCCEFz4-2",
     "video": "FUCjvCCEFz4",
-    "hook": "Sunset to stars in nine hours",
+    "hook": "Sunset to stars in Broadway Cave",
     "start": 46,
     "focus": 0.5,
     "fit": "full"
@@ -368,14 +312,6 @@
     "fit": "full"
   },
   {
-    "id": "G2GQ5mhpUWY-2",
-    "video": "G2GQ5mhpUWY",
-    "hook": "Cherry blossoms and a crackling fire",
-    "start": 46,
-    "focus": 0.5,
-    "fit": "full"
-  },
-  {
     "id": "baWJQgAw5Ss-2",
     "video": "baWJQgAw5Ss",
     "hook": "Wildflowers swaying outside a cozy cabin",
@@ -387,30 +323,6 @@
     "id": "GkS-f5JLaUE-3",
     "video": "GkS-f5JLaUE",
     "hook": "Leaves moving in the morning breeze",
-    "start": 82,
-    "focus": 0.5,
-    "fit": "full"
-  },
-  {
-    "id": "o5rIMjVFMmw-3",
-    "video": "o5rIMjVFMmw",
-    "hook": "Nine hours of falling water",
-    "start": 82,
-    "focus": 0.5,
-    "fit": "full"
-  },
-  {
-    "id": "8a97ygxGfss-3",
-    "video": "8a97ygxGfss",
-    "hook": "Rain and thunder recorded in the field",
-    "start": 82,
-    "focus": 0.5,
-    "fit": "full"
-  },
-  {
-    "id": "ERo2kfGJJXA-3",
-    "video": "ERo2kfGJJXA",
-    "hook": "Sleep beside a hidden waterfall",
     "start": 82,
     "focus": 0.5,
     "fit": "full"
@@ -560,17 +472,81 @@
     "fit": "full"
   },
   {
-    "id": "G2GQ5mhpUWY-3",
-    "video": "G2GQ5mhpUWY",
-    "hook": "A spring garden with a hidden surprise",
+    "id": "baWJQgAw5Ss-3",
+    "video": "baWJQgAw5Ss",
+    "hook": "A fire, birdsong and a meadow breeze",
     "start": 82,
     "focus": 0.5,
     "fit": "full"
   },
   {
-    "id": "baWJQgAw5Ss-3",
-    "video": "baWJQgAw5Ss",
-    "hook": "A fire, birdsong and a meadow breeze",
+    "id": "o5rIMjVFMmw-1",
+    "video": "o5rIMjVFMmw",
+    "hook": "I recorded this waterfall at Fall Creek",
+    "start": 10,
+    "focus": 0.5,
+    "fit": "full"
+  },
+  {
+    "id": "8a97ygxGfss-1",
+    "video": "8a97ygxGfss",
+    "hook": "A monsoon storm over the Arizona desert",
+    "start": 10,
+    "focus": 0.5,
+    "fit": "full"
+  },
+  {
+    "id": "ERo2kfGJJXA-1",
+    "video": "ERo2kfGJJXA",
+    "hook": "Real waterfall sound from British Columbia",
+    "start": 10,
+    "focus": 0.5,
+    "fit": "full"
+  },
+  {
+    "id": "o5rIMjVFMmw-2",
+    "video": "o5rIMjVFMmw",
+    "hook": "A gazebo, a fire and a waterfall",
+    "start": 46,
+    "focus": 0.5,
+    "fit": "full"
+  },
+  {
+    "id": "8a97ygxGfss-2",
+    "video": "8a97ygxGfss",
+    "hook": "Nearly 100 lightning strikes in one loop",
+    "start": 46,
+    "focus": 0.5,
+    "fit": "full"
+  },
+  {
+    "id": "ERo2kfGJJXA-2",
+    "video": "ERo2kfGJJXA",
+    "hook": "Nine hours in a timber cabin",
+    "start": 46,
+    "focus": 0.5,
+    "fit": "full"
+  },
+  {
+    "id": "o5rIMjVFMmw-3",
+    "video": "o5rIMjVFMmw",
+    "hook": "Nine hours of falling water",
+    "start": 82,
+    "focus": 0.5,
+    "fit": "full"
+  },
+  {
+    "id": "8a97ygxGfss-3",
+    "video": "8a97ygxGfss",
+    "hook": "Rain and thunder recorded in the field",
+    "start": 82,
+    "focus": 0.5,
+    "fit": "full"
+  },
+  {
+    "id": "ERo2kfGJJXA-3",
+    "video": "ERo2kfGJJXA",
+    "hook": "Sleep beside a hidden waterfall",
     "start": 82,
     "focus": 0.5,
     "fit": "full"
