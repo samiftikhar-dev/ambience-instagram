@@ -96,14 +96,6 @@
     "fit": "full"
   },
   {
-    "id": "V63ZKoDurZ0-1",
-    "video": "V63ZKoDurZ0",
-    "hook": "Sunrise from a hot tub by the creek",
-    "start": 10,
-    "focus": 0.5,
-    "fit": "full"
-  },
-  {
     "id": "oBeHCs9fbwE-1",
     "video": "oBeHCs9fbwE",
     "hook": "A campfire under the Milky Way",
@@ -131,30 +123,6 @@
     "id": "Cukxb8epBws-1",
     "video": "Cukxb8epBws",
     "hook": "A riverside camp in the woods",
-    "start": 10,
-    "focus": 0.5,
-    "fit": "full"
-  },
-  {
-    "id": "1-6DCrkii30-1",
-    "video": "1-6DCrkii30",
-    "hook": "Start the day beside a rushing creek",
-    "start": 10,
-    "focus": 0.5,
-    "fit": "full"
-  },
-  {
-    "id": "ppIA-0nR2uc-1",
-    "video": "ppIA-0nR2uc",
-    "hook": "Coffee by the fire, tulips all around",
-    "start": 10,
-    "focus": 0.5,
-    "fit": "full"
-  },
-  {
-    "id": "baWJQgAw5Ss-1",
-    "video": "baWJQgAw5Ss",
-    "hook": "A cabin door open to a spring meadow",
     "start": 10,
     "focus": 0.5,
     "fit": "full"
@@ -256,14 +224,6 @@
     "fit": "full"
   },
   {
-    "id": "V63ZKoDurZ0-2",
-    "video": "V63ZKoDurZ0",
-    "hook": "A mountain creek in spring runoff",
-    "start": 46,
-    "focus": 0.5,
-    "fit": "full"
-  },
-  {
     "id": "oBeHCs9fbwE-2",
     "video": "oBeHCs9fbwE",
     "hook": "A night in Hidden Valley, Joshua Tree",
@@ -291,30 +251,6 @@
     "id": "Cukxb8epBws-2",
     "video": "Cukxb8epBws",
     "hook": "A real forest river, nine hours long",
-    "start": 46,
-    "focus": 0.5,
-    "fit": "full"
-  },
-  {
-    "id": "1-6DCrkii30-2",
-    "video": "1-6DCrkii30",
-    "hook": "Put this on while you work",
-    "start": 46,
-    "focus": 0.5,
-    "fit": "full"
-  },
-  {
-    "id": "ppIA-0nR2uc-2",
-    "video": "ppIA-0nR2uc",
-    "hook": "A windmill turning in tulip season",
-    "start": 46,
-    "focus": 0.5,
-    "fit": "full"
-  },
-  {
-    "id": "baWJQgAw5Ss-2",
-    "video": "baWJQgAw5Ss",
-    "hook": "Wildflowers swaying outside a cozy cabin",
     "start": 46,
     "focus": 0.5,
     "fit": "full"
@@ -416,14 +352,6 @@
     "fit": "full"
   },
   {
-    "id": "V63ZKoDurZ0-3",
-    "video": "V63ZKoDurZ0",
-    "hook": "Nine hours of a mountain morning",
-    "start": 82,
-    "focus": 0.5,
-    "fit": "full"
-  },
-  {
     "id": "oBeHCs9fbwE-3",
     "video": "oBeHCs9fbwE",
     "hook": "Stargazing in Joshua Tree for nine hours",
@@ -451,30 +379,6 @@
     "id": "Cukxb8epBws-3",
     "video": "Cukxb8epBws",
     "hook": "A campfire beside a forest river",
-    "start": 82,
-    "focus": 0.5,
-    "fit": "full"
-  },
-  {
-    "id": "1-6DCrkii30-3",
-    "video": "1-6DCrkii30",
-    "hook": "Creek water and a morning fire",
-    "start": 82,
-    "focus": 0.5,
-    "fit": "full"
-  },
-  {
-    "id": "ppIA-0nR2uc-3",
-    "video": "ppIA-0nR2uc",
-    "hook": "Tulips and Mount Baker, nine hours long",
-    "start": 82,
-    "focus": 0.5,
-    "fit": "full"
-  },
-  {
-    "id": "baWJQgAw5Ss-3",
-    "video": "baWJQgAw5Ss",
-    "hook": "A fire, birdsong and a meadow breeze",
     "start": 82,
     "focus": 0.5,
     "fit": "full"

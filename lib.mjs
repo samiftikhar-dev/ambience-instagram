@@ -26,7 +26,18 @@ export const placeLine = (v) => [v.place, v.region].filter(Boolean).join(', ');
  * channel About text (places he has explored, his own photography and video).
  * Never his former employer: he doesn't want to be easy to identify.
  */
-const ABOUT = "I'm Bob. After a long career as an engineer I retired and found a new passion: exploring real places, recording their sounds and turning my photographs and footage into ambience scenes.";
+// Mackenzie's own wording (Oct 10), without her last two sentences: the "Find the
+// full video" line that follows names the exact video and says link in bio.
+export const INTRO = "Hi, I'm Bob! 👋 After a long career as an engineer, I retired and went outside. Now I travel to peaceful places, record the sounds myself, and build each scene from my own photos and footage. Whether you need to focus, unwind, or drift off to sleep, I hope these little escapes help.";
+
+const FIRE_AI = /fire[^.]*\bAI\b|\bAI\b[^.]*fire/i;
+/**
+ * The "how it was made" line. Mackenzie (Oct 10): none of the fires were ever
+ * recorded, they are all AI-generated, so any video with a fire says so.
+ */
+export function madeLine(v) {
+  return v.fire && !FIRE_AI.test(v.made) ? `${v.made} The fire is AI-generated.` : v.made;
+}
 
 const STOP = new Set('i the a an at in of and my me we this that is was were to for on by with it its you ll no from as or are be there here'.split(' '));
 const words = (s) => new Set(s.toLowerCase().replace(/[^a-z0-9 ]/g, ' ').split(/\s+/).filter((w) => w && !STOP.has(w)));
@@ -50,7 +61,7 @@ function bodyLines(clip, v) {
   const hook = `${clip.hook}.`.replace(/([.?!])\.$/, '$1');
   const said = `${clip.hook} ${v.made}`;
   const showPlace = !v.anon && overlap(v.place, said) < 0.6;
-  return { hook, place: showPlace ? `${placeLine(v)}.` : null, made: v.made, hear: `You'll hear ${v.sounds}. No music.` };
+  return { hook, place: showPlace ? `${placeLine(v)}.` : null, made: madeLine(v), hear: `You'll hear ${v.sounds}. No music.` };
 }
 
 /** Mackenzie's note (Oct 10): a place followed by a colon reads as clunky, so every line is a sentence. */
@@ -64,7 +75,8 @@ export function captionFor(clip, v) {
     b.made,
     b.hear,
     '',
-    first ? ABOUT : '— Bob',
+    // The intro says Bob records the sounds himself, so it is not used where others did.
+    first && !v.sharedSound ? INTRO : '— Bob',
     '',
     `Find the full ${hoursWord(v.hours)}-hour video, "${v.short}", on YouTube at The Ambience Experience. Link in bio.`,
     '',
@@ -97,12 +109,14 @@ export function lintCaption(text, v) {
   // Only the lines that describe the Reel, up to the sign-off (the "Find the full
   // video" line names the video's own title, so it echoes the opening on purpose).
   const all = text.split('\n').filter(Boolean);
-  const end = all.findIndex((l) => l.startsWith("I'm Bob") || l.startsWith('— Bob'));
+  const end = all.findIndex((l) => l.startsWith("Hi, I'm Bob") || l.startsWith('— Bob'));
   const tops = all.slice(0, end < 0 ? 4 : end);
   // Mackenzie (Oct 10): never call a recording a photograph, and never make the
   // picture sound recorded when only the sound is. The catalog flags decide.
   const said = tops.join(' ').toLowerCase();
   if (tops.some((l) => l.includes(':'))) problems.push('a caption line has a colon (Mackenzie: every line is a plain sentence)');
+  if (v.fire && !FIRE_AI.test(tops.join(' '))) problems.push('the video has a fire but the caption does not say the fire is AI-generated');
+  if (/hot tub/i.test(tops.join(' '))) problems.push('mentions the hot tub (Mackenzie does not want it highlighted)');
   if (/\bphoto/.test(said) && !v.photo) problems.push('says photo/photograph, but the picture is not known to be a photograph');
   if (/\b(filmed|footage|video)\b/.test(said) && !v.footage) problems.push('says filmed/footage/video, but the picture is not known to be a recording');
   if (/\bi recorded this\b/.test(said) && !v.footage) problems.push('says "I recorded this", which reads as the picture, but only the sound is a recording');
@@ -117,6 +131,7 @@ export function lintHook(hook, v) {
   const problems = [];
   if (hook.length > 48) problems.push(`hook is ${hook.length} characters (48 at most)`);
   if (hook.includes(':')) problems.push('hook has a colon');
+  if (/hot tub/i.test(hook)) problems.push('hook mentions the hot tub');
   if (/\bphoto/i.test(hook) && !v.photo) problems.push('hook says photo, but the picture is not known to be a photograph');
   if (/\b(i filmed|filmed this|footage|i recorded this)\b/i.test(hook) && !v.footage) problems.push('hook makes the picture sound recorded, but only the sound is');
   if (/\bi recorded this\b/i.test(hook) && !v.onSite) problems.push('hook says "I recorded this" but onSite is false');

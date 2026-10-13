@@ -20,7 +20,7 @@
 import { execFileSync } from 'node:child_process';
 import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync, rmSync } from 'node:fs';
 import { posix } from 'node:path';
-import { catalog, captionFor, lintCaption, lintHook, placeLine } from './lib.mjs';
+import { catalog, captionFor, lintCaption, lintHook, overlap, placeLine } from './lib.mjs';
 
 const W = 1080, H = 1920, FPS = 30;
 export const LENGTH = 12;   // seconds of Reel
@@ -54,6 +54,19 @@ function wrap(text, width) {
   return out;
 }
 
+/**
+ * The small line under the opening words. Mackenzie (Oct 10): a title or place
+ * read right after the opening line, saying the same thing, "doesn't read well".
+ * So it only appears when it adds something: the video's short title if the
+ * opening line doesn't already say it, else the region, else nothing.
+ */
+export function labelFor(clip, v) {
+  if (overlap(v.short, clip.hook) < 0.34) return v.short;
+  const region = v.region && v.region.split(', ').slice(0, 2).join(', ');
+  if (region && region.length <= 26 && overlap(region, clip.hook) < 0.34) return region;
+  return null;
+}
+
 const spaced = (s) => s.toUpperCase().split('').join(' ').replace(/ {3}/g, '   ');
 
 /** drawtext from a file, so quotes, colons and apostrophes need no escaping. */
@@ -83,6 +96,7 @@ export function renderClip(clip, v, outDir = 'out') {
     : `crop=w=ih*9/16:h=ih:x=(iw-ow)*${focus}:y=0,scale=${W}:${H}`;
 
   const hookLines = wrap(clip.hook, 18);
+  const label = labelFor(clip, v);
   // The full layout's frame starts about 656px down; keep the place line clear of it.
   const top = clip.fit === 'full' ? 230 : 300;
   // The channel's name stays on for the whole clip (so the loop has no jump),
@@ -96,7 +110,7 @@ export function renderClip(clip, v, outDir = 'out') {
     text(dir, 'tagline', 'real places · real sound', { font: SERIF, size: 34, y: brandY + 56, alpha: TAG_ALPHA }),
     text(dir, 'link', 'Full video on YouTube · link in bio', { font: SERIF, size: 34, y: brandY + 56, alpha: LINK_ALPHA }),
     ...hookLines.map((line, i) => text(dir, `h${i}`, line, { font: SERIF, size: 78, y: top + i * 96, alpha: HOOK_ALPHA })),
-    text(dir, 'place', spaced(v.short), { font: SANS, size: 30, y: top + hookLines.length * 96 + 40, alpha: HOOK_ALPHA }),
+    ...(label ? [text(dir, 'place', spaced(label), { font: SANS, size: 30, y: top + hookLines.length * 96 + 40, alpha: HOOK_ALPHA })] : []),
   ];
 
   const f = [

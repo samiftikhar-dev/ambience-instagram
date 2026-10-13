@@ -26,9 +26,9 @@ const API = 'https://graph.instagram.com/v23.0';
 const TOKEN = process.env.IG_ACCESS_TOKEN;
 const MODE = process.env.MODE || 'publish';
 const REPO = process.env.GITHUB_REPOSITORY;
-// Five Reels a day (Sam, Oct 10 2026), about three hours apart; a GitHub
+// One Reel a day (Mackenzie asked, Sam agreed, Oct 13 2026); a GitHub
 // delay can bunch two runs, so never closer than this. A burst run sets 0.
-const MIN_GAP_HOURS = Number(process.env.MIN_GAP_HOURS ?? 2.5);
+const MIN_GAP_HOURS = Number(process.env.MIN_GAP_HOURS ?? 18);
 const RATE_LIMIT = new Set([4, 9, 17, 32, 613]);
 const BLOCKED = new Set([368, 190, 10, 200]);
 
