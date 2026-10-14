@@ -21,7 +21,7 @@ const PAIRS = [{
   top: 'On the trail', bottom: 'The finished scene',
   caption: [
     'The view from the trail, and the scene it became.', '',
-    'On top, a day out at Fall Creek. Below, the finished scene. The valley and the sound are real. AI added the patio, the seating and the fire.',
+    'On top, a day out at Fall Creek. Below, the finished scene. The valley, the waterfalls and the sound are real. AI added the patio, the seating and the fire.',
     "You'll hear flowing water, birdsong and a crackling fire. No music.", '',
     '— Bob', '',
     'Find the full nine-hour video, "Fall Creek valley", on YouTube at The Ambience Experience. Link in bio.', '',

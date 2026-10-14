@@ -90,6 +90,8 @@ note. Sessions here are never to claim a fix without checking the whole set.
 - Sources are 2-minute 720p clips in sources/ named <youtubeId>.mp4 (the
   downloads arrive as clip_<id>_0-120_*.mp4).
 
+- BEFORE writing any claim about a video (pairings, split screens, captions), read that video's own YouTube description (videos.json, or fetch the watch page): Bob writes the facts there. On Oct 14 the Fall Creek valley waterfalls were nearly left out of a caption although its description says they were filmed on location.
+
 ## Open questions (waiting on Mackenzie, Bob or Sam)
 
 - The desert storm Reel 1 and Kay Falls Reel 1 were marked "needs redone";
