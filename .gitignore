@@ -4,3 +4,4 @@ work/
 out/
 .feed-snapshot.xml
 *.log
+bts-source/
