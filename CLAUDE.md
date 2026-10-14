@@ -74,11 +74,7 @@ note. Sessions here are never to claim a fix without checking the whole set.
 
 ## State (Oct 13 2026)
 
-- Posting is PAUSED. publish.yml and shorts.yml are disabled; the queue
-  release does not exist; approved.json is empty. Sam will say "go" for the first
-  Reel. Then: write approved.json from the review page, `node queue.mjs upload`,
-  `gh workflow enable publish.yml`. All three earlier live Reels were deleted
-  by Sam; published.json is empty.
+- Posting is LIVE since Oct 13 2026 (Sam: "start posting"). publish.yml is enabled: one Reel a day at 8:30pm Pacific. Reel 1 (Autumn Falls) went out Oct 13 5:30pm Pacific. approved.json holds the 45 Reels queued (approved by Mackenzie AND facts confirmed); Kay Falls, Mount Rainier, Fall Creek and the desert storm are NOT queued until their facts are confirmed on the review page. To add more: update approved.json from the page, node queue.mjs upload.
 - 57 Reels from 19 videos are rendered in out/ (gitignored) in posting order
   (clips.json). Review page: https://claude.ai/artifact/D4LW92esaec6xU2BTQUNCv
   (collections `approvals` and `facts`; rebuild with the scratchpad build.mjs,
