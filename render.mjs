@@ -21,6 +21,7 @@ import { execFileSync } from 'node:child_process';
 import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync, rmSync } from 'node:fs';
 import { posix } from 'node:path';
 import { catalog, captionFor, lintCaption, lintHook, overlap, placeLine } from './lib.mjs';
+import { END_LENGTH, END_FADE, endCardAvailable, endCardInputs, endCardFilters } from './endcard.mjs';
 
 const W = 1080, H = 1920, FPS = 30;
 export const LENGTH = 12;   // seconds of Reel
@@ -83,6 +84,7 @@ const HOOK_ALPHA = 'if(lt(t,0.3),0,if(lt(t,0.9),(t-0.3)/0.6,if(lt(t,4.2),1,if(lt
 export function renderClip(clip, v, outDir = 'out') {
   const src = sourceFor(clip.video);
   if (!src) throw new Error(`no source in sources/ for ${clip.video}`);
+  if (!endCardAvailable()) throw new Error('the end card needs bts-source/bob-at-tripod.jpg and brand/profile-1080.jpg');
   const dir = posix.join('work', clip.id);
   rmSync(dir, { recursive: true, force: true });
   mkdirSync(dir, { recursive: true });
@@ -119,25 +121,32 @@ export function renderClip(clip, v, outDir = 'out') {
     `[vb]trim=${F}:${L},setpts=PTS-STARTPTS[body]`,
     `[vc]trim=${L}:${L + F},setpts=PTS-STARTPTS[tail]`,
     `[tail][head]xfade=transition=fade:duration=${F}:offset=0[seam]`,
-    `[seam][body]concat=n=2:v=1:a=0,${overlays.join(',')},format=yuv420p[v]`,
+    `[seam][body]concat=n=2:v=1:a=0,${overlays.join(',')},format=yuv420p,fps=${FPS}[main]`,
+    ...endCardFilters(dir, 1, 2, v.hours),
+    `[main][end]xfade=transition=fade:duration=${END_FADE}:offset=${L - END_FADE},format=yuv420p[v]`,
     `[0:a]aformat=sample_rates=48000:channel_layouts=stereo,asplit=3[aa][ab][ac]`,
     `[aa]atrim=0:${F},asetpts=PTS-STARTPTS[ahead]`,
     `[ab]atrim=${F}:${L},asetpts=PTS-STARTPTS[abody]`,
     `[ac]atrim=${L}:${L + F},asetpts=PTS-STARTPTS[atail]`,
     `[atail][ahead]acrossfade=d=${F}:c1=tri:c2=tri[aseam]`,
-    `[aseam][abody]concat=n=2:v=0:a=1,loudnorm=I=-16:TP=-1.5:LRA=11[a]`,
+    `[aseam][abody]concat=n=2:v=0:a=1,loudnorm=I=-16:TP=-1.5:LRA=11,asplit[am1][am2]`,
+    // The sound runs on under the end card: the loop's own first seconds, which it
+    // already blends into, so the ambience never breaks.
+    `[am2]atrim=0:${END_LENGTH},asetpts=PTS-STARTPTS[am3]`,
+    `[am1][am3]acrossfade=d=${END_FADE}:c1=tri:c2=tri[a]`,
   ];
 
   const out = posix.join(outDir, `${clip.id}.mp4`);
   execFileSync('ffmpeg', [
     '-y', '-loglevel', 'error',
     '-ss', String(clip.start), '-t', String(L + F + 0.5), '-i', src,
+    ...endCardInputs(),
     '-filter_complex', f.join(';'),
     '-map', '[v]', '-map', '[a]',
     '-c:v', 'libx264', '-preset', 'slow', '-crf', '18', '-profile:v', 'high', '-pix_fmt', 'yuv420p', '-r', String(FPS),
     '-maxrate', '12M', '-bufsize', '20M',
     '-c:a', 'aac', '-b:a', '192k', '-ar', '48000',
-    '-t', String(L), '-movflags', '+faststart',
+    '-t', String(L + END_LENGTH - END_FADE), '-movflags', '+faststart',
     out,
   ], { stdio: 'inherit' });
 

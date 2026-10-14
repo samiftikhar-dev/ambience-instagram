@@ -11,6 +11,7 @@
  */
 import { execFileSync } from 'node:child_process';
 import { mkdirSync, writeFileSync, rmSync } from 'node:fs';
+import { endCardFilters, endCardInputs } from './endcard.mjs';
 
 const SERIF = 'fonts/PlayfairDisplay.ttf', SANS = 'fonts/SpaceGrotesk.ttf';
 const spaced = (s) => s.toUpperCase().split('').join(' ').replace(/ {3}/g, '   ');
@@ -60,14 +61,6 @@ for (const p of PAIRS) {
     dt(dir, 'bot', spaced(p.bottom), { font: SANS, size: 24, x: 84, y: 1004 }),
   ];
 
-  // End card, all inside the safe area (nothing below y 1500).
-  const e = p.end;
-  const endText = [
-    dt(dir, 'e_name', spaced(e.name), { font: SANS, size: 32, y: 640, color: '0xE8E4DC' }),
-    ...e.lines.map((l, i) => dt(dir, `e_l${i}`, l, { font: SERIF, size: i === 0 ? 76 : 48, y: 720 + (i === 0 ? 0 : 20) + i * 84 + (i > 0 ? 12 : 0), color: 'white' })),
-    ...e.cta.map((l, i) => dt(dir, `e_c${i}`, l, { font: SANS, size: 40, y: 1060 + i * 58, color: '0xE09A52' })),
-  ];
-
   const f = [
     // main: split screen, 12 seconds
     `[1:v]split[s0][s1]`,
@@ -76,18 +69,15 @@ for (const p of PAIRS) {
     `[0:v]scale=960:540:force_original_aspect_ratio=increase,crop=960:540,setsar=1,fps=30,tpad=stop_mode=clone:stop_duration=3,trim=duration=${L},setpts=PTS-STARTPTS[bts]`,
     `[bg][bts]overlay=60:400[a]`,
     `[a][scene]overlay=60:980,${over.join(',')},format=yuv420p,fps=30[main]`,
-    // end card: Bob's photo, blurred and darkened, with the logo in a circle
-    `[2:v]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,boxblur=22:2,eq=brightness=-0.32:saturation=0.9,fps=30[ebg]`,
-    `[3:v]scale=240:240,format=rgba,geq=r='r(X,Y)':g='g(X,Y)':b='b(X,Y)':a='if(lt(hypot(X-120,Y-120),120),255,0)'[logo]`,
-    `[ebg][logo]overlay=420:340,${endText.join(',')},format=yuv420p,fps=30[end]`,
+    // the shared end card (endcard.mjs): Bob's photo, the logo, the follow line
+    ...endCardFilters(dir, 2, 3, 9),
     `[main][end]xfade=transition=fade:duration=${FADE}:offset=${L - FADE},format=yuv420p[v]`,
     `[1:a]aformat=sample_rates=48000:channel_layouts=stereo,loudnorm=I=-16:TP=-1.5,afade=t=in:d=0.4,afade=t=out:st=${total - 0.8}:d=0.8[a2]`,
   ];
   execFileSync('ffmpeg', ['-y', '-loglevel', 'error',
     '-ss', String(p.btsStart), '-t', String(L), '-i', p.bts,
     '-ss', String(p.sceneStart), '-t', String(total + 0.2), '-i', p.scene,
-    '-loop', '1', '-framerate', '30', '-t', String(E), '-i', p.photo,
-    '-loop', '1', '-framerate', '30', '-t', String(E), '-i', p.logo,
+    ...endCardInputs(),
     '-filter_complex', f.join(';'), '-map', '[v]', '-map', '[a2]',
     '-c:v', 'libx264', '-preset', 'slow', '-crf', '18', '-pix_fmt', 'yuv420p', '-c:a', 'aac', '-b:a', '192k', '-t', String(total), '-movflags', '+faststart', `out/${p.id}.mp4`], { stdio: 'inherit' });
   execFileSync('ffmpeg', ['-y', '-loglevel', 'error', '-ss', String(total - 1), '-i', `out/${p.id}.mp4`, '-frames:v', '1', '-q:v', '3', `out/${p.id}-end.jpg`]);

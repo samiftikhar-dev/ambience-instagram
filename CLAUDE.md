@@ -66,6 +66,7 @@ note. Sessions here are never to claim a fix without checking the whole set.
 - The first Reel of each video opens with Mackenzie's own introduction
   (INTRO in lib.mjs, "Hi, I'm Bob! 👋 ..."), except where `sharedSound` is true
   (the desert storm: other recordists). Never the employer's name.
+- Every Reel ends with a 3-second end card (endcard.mjs): the logo, "Hi, I'm Bob.", "Real places, real sound.", "Follow for more scenes like this." and "The full nine-hour video is on YouTube. Link in bio." over Bob's own photo (bts-source/bob-at-tripod.jpg, NOT in git: the repo is public). NEVER promise a cadence ("every day") in any text, Sam's ruling Oct 14: we may not be able to deliver it. Instagram covers the bottom fifth of a Reel, so on-screen text stays above y 1500.
 - Each Reel pops up "Full video on YouTube · link in bio" at 6 seconds. The
   Reels API cannot attach links, so the bio link stays the YouTube channel and
   each caption names the exact video to look for. A page of every video
