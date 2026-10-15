@@ -5,7 +5,7 @@ name: Post a Reel
 # scheduled runs late or drop them (it did on Oct 14), so four runs an hour apart
 # (7:30 to 10:30pm Pacific in daylight time) back each other up; publish.mjs keeps
 # at least 18 hours between Reels, so only one ever posts.
-# This workflow stays DISABLED until Sam says go.
+# Live since Oct 13 2026 (Sam: start posting).
 #
 # Run by hand with mode "burst" to post several, spaced out (the launch post
 # the first 10 about 35 minutes apart: never many in one hour, which is what
