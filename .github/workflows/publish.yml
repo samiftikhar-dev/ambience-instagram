@@ -2,9 +2,10 @@ name: Post a Reel
 
 # One Reel a day (Mackenzie asked, Sam agreed, Oct 13 2026): 8:30pm Pacific in
 # daylight time (7:30pm in winter), when people wind down. GitHub can start
-# scheduled runs late or drop them (it did on Oct 14), so four runs an hour apart
-# (7:30 to 10:30pm Pacific in daylight time) back each other up; publish.mjs keeps
-# at least 18 hours between Reels, so only one ever posts.
+# scheduled runs by about FIVE hours (Oct 14 and 15: runs set for 8:30pm started
+# near 1:30am and the overnight guard blocked them). So four runs are set earlier,
+# at 1:30, 3:30, 5:30 and 7:30pm Pacific in daylight time: a typical delay then lands
+# in the evening, and publish.mjs keeps 18 hours between Reels, so only one posts.
 # Live since Oct 13 2026 (Sam: start posting).
 #
 # Run by hand with mode "burst" to post several, spaced out (the launch post
@@ -12,10 +13,10 @@ name: Post a Reel
 # got the LuxyBasement app blocked).
 on:
   schedule:
+    - cron: '30 20 * * *'
+    - cron: '30 22 * * *'
+    - cron: '30 0 * * *'
     - cron: '30 2 * * *'
-    - cron: '30 3 * * *'
-    - cron: '30 4 * * *'
-    - cron: '30 5 * * *'
   workflow_dispatch:
     inputs:
       mode:
