@@ -61,7 +61,7 @@ function bodyLines(clip, v) {
   const hook = `${clip.hook}.`.replace(/([.?!])\.$/, '$1');
   const said = `${clip.hook} ${v.made}`;
   const showPlace = !v.anon && overlap(v.place, said) < 0.6;
-  return { hook, place: showPlace ? `${placeLine(v)}.` : null, made: madeLine(v), hear: `You'll hear ${v.sounds}. No music.` };
+  return { hook, place: showPlace ? `${placeLine(v)}.` : null, made: madeLine(v), hear: `You'll hear ${v.sounds}.${v.music ? '' : ' No music.'}` };
 }
 
 /** Mackenzie's note (Oct 10): a place followed by a colon reads as clunky, so every line is a sentence. */
@@ -76,7 +76,7 @@ export function captionFor(clip, v) {
     b.hear,
     '',
     // The intro says Bob records the sounds himself, so it is not used where others did.
-    first && !v.sharedSound ? INTRO : '— Bob',
+    first && !v.sharedSound ? (v.intro || INTRO) : '— Bob',
     '',
     `Find the full ${hoursWord(v.hours)}-hour video, "${v.short}", on YouTube at The Ambience Experience. Link in bio.`,
     '',

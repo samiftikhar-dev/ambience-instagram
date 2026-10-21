@@ -160,5 +160,17 @@
     "made": "The place and the sound are real, and AI helps shape the visuals.", "generic": true,
     "hooks": ["A cabin door open to a spring meadow", "Wildflowers swaying outside a cozy cabin", "A fire, birdsong and a meadow breeze"],
     "tags": ["#cozycabin", "#springmeadow", "#fireplacesounds", "#cascades", "#relaxingsounds"]
+  },
+  "bDL-UAnYRH4": {
+    "short": "Haunted Victorian Library", "place": "A haunted Victorian library", "region": null, "anon": true, "hours": 3.5, "music": true,
+    "priority": true, "endScene": true, "until": "2026-10-31",
+    "tagline": "original Halloween music", "endLine": "Original Halloween music.",
+    "intro": "Hi, I'm Bob! ðŸ‘‹ After a long career as an engineer, I retired and went outside. This Halloween I stayed in, and built a haunted library. Whether you need to focus, unwind, or just want a little shiver, I hope it makes your evening.",
+    "sounds": "original Halloween music and ghostly ambience", "onSite": false,
+    "made": "Everything you see and hear began as AI-assisted generation, from the library and the ghosts to the music. Then I spent nearly 200 hours editing, animating and compositing it in DaVinci Resolve.",
+    "sources": ["bDL-UAnYRH4", "bDL-UAnYRH4-b"],
+    "cuts": [{"src": 0, "start": 14}, {"src": 1, "start": 6}, {"src": 0, "start": 12}, {"src": 1, "start": 52}, {"src": 0, "start": 70}, {"src": 1, "start": 92}],
+    "hooks": ["A haunted study, lit by candlelight", "Ghosts waltz across the library floor", "A book that turns its own pages", "A midnight waltz in the library", "A quiet corner of the haunted study", "Dancing ghosts and a glowing fire"],
+    "tags": ["#halloweenambience", "#hauntedlibrary", "#halloween2026", "#gothicambience", "#spookyseason"]
   }
 }

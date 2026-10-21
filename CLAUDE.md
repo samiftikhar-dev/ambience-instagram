@@ -73,6 +73,8 @@ note. Sessions here are never to claim a fix without checking the whole set.
   (docs/index.html, node hub.mjs) is built but NOT published: GitHub Pages would
   show Sam's username. A custom domain would revive it.
 
+- HALLOWEEN (Oct 20 2026): the video "Haunted Victorian Library" (bDL-UAnYRH4, built by Bob over nearly 200 hours) is almost entirely AI-generated visuals and music, then edited by hand. It has its own rules in catalog.json: music true (no "No music" line), its own intro, tagline and end-card line, endScene (card sits on the library, not Bob's photo), priority and until 2026-10-31 (front of the queue, drops out after). Six Reels from two 2-minute clips (sources bDL-UAnYRH4.mp4 and -b.mp4; the first ~9 seconds of clip A carry a title card). plan.mjs: the catalog decides cuts (a changed start now overrides the old clips.json). NOT queued until Mackenzie approves them AND Bob confirms the facts, and Mackenzie must rule on promoting a mostly-AI video (she asked not to highlight the cherry blossom one).
+
 ## State (Oct 13 2026)
 
 - Posting is LIVE since Oct 13 2026 (Sam: "start posting"). publish.yml is enabled: one Reel a day at 8:30pm Pacific. Reel 1 (Autumn Falls) went out Oct 13 5:30pm Pacific. approved.json holds the 45 Reels queued (approved by Mackenzie AND facts confirmed); Kay Falls, Mount Rainier, Fall Creek and the desert storm are NOT queued until their facts are confirmed on the review page. To add more: update approved.json from the page, node queue.mjs upload.

@@ -82,13 +82,21 @@ function text(dir, name, value, { font, size, y, alpha, color = 'white' }) {
 const HOOK_ALPHA = 'if(lt(t,0.3),0,if(lt(t,0.9),(t-0.3)/0.6,if(lt(t,4.2),1,if(lt(t,4.8),(4.8-t)/0.6,0))))';
 
 export function renderClip(clip, v, outDir = 'out') {
-  const src = sourceFor(clip.video);
+  const src = sourceFor(clip.src || clip.video);
   if (!src) throw new Error(`no source in sources/ for ${clip.video}`);
   if (!endCardAvailable()) throw new Error('the end card needs bts-source/bob-at-tripod.jpg and brand/profile-1080.jpg');
   const dir = posix.join('work', clip.id);
   rmSync(dir, { recursive: true, force: true });
   mkdirSync(dir, { recursive: true });
   mkdirSync(outDir, { recursive: true });
+
+  // The end card normally sits on Bob's own photo; a video can use a still of its
+  // own scene instead (the Halloween library), taken here from the source clip.
+  let endPhoto;
+  if (v.endScene) {
+    endPhoto = posix.join(dir, 'endbg.jpg');
+    execFileSync('ffmpeg', ['-y', '-loglevel', 'error', '-ss', '20', '-i', src, '-frames:v', '1', endPhoto]);
+  }
 
   const L = LENGTH, F = BLEND;
   const focus = Math.min(1, Math.max(0, clip.focus ?? 0.5));
@@ -109,7 +117,7 @@ export function renderClip(clip, v, outDir = 'out') {
   const LINK_ALPHA = 'if(lt(t,6),0,if(lt(t,6.7),0.95*(t-6)/0.7,0.95))';
   const overlays = [
     text(dir, 'brand', spaced('The Ambience Experience'), { font: SANS, size: 32, y: brandY, alpha: '0.92' }),
-    text(dir, 'tagline', 'real places · real sound', { font: SERIF, size: 34, y: brandY + 56, alpha: TAG_ALPHA }),
+    text(dir, 'tagline', v.tagline || 'real places · real sound', { font: SERIF, size: 34, y: brandY + 56, alpha: TAG_ALPHA }),
     text(dir, 'link', 'Full video on YouTube · link in bio', { font: SERIF, size: 34, y: brandY + 56, alpha: LINK_ALPHA }),
     ...hookLines.map((line, i) => text(dir, `h${i}`, line, { font: SERIF, size: 78, y: top + i * 96, alpha: HOOK_ALPHA })),
     ...(label ? [text(dir, 'place', spaced(label), { font: SANS, size: 30, y: top + hookLines.length * 96 + 40, alpha: HOOK_ALPHA })] : []),
@@ -122,7 +130,7 @@ export function renderClip(clip, v, outDir = 'out') {
     `[vc]trim=${L}:${L + F},setpts=PTS-STARTPTS[tail]`,
     `[tail][head]xfade=transition=fade:duration=${F}:offset=0[seam]`,
     `[seam][body]concat=n=2:v=1:a=0,${overlays.join(',')},format=yuv420p,fps=${FPS}[main]`,
-    ...endCardFilters(dir, 1, 2, v.hours),
+    ...endCardFilters(dir, 1, 2, v.hours, v.endLine),
     `[main][end]xfade=transition=fade:duration=${END_FADE}:offset=${L - END_FADE},format=yuv420p[v]`,
     `[0:a]aformat=sample_rates=48000:channel_layouts=stereo,asplit=3[aa][ab][ac]`,
     `[aa]atrim=0:${F},asetpts=PTS-STARTPTS[ahead]`,
@@ -140,7 +148,7 @@ export function renderClip(clip, v, outDir = 'out') {
   execFileSync('ffmpeg', [
     '-y', '-loglevel', 'error',
     '-ss', String(clip.start), '-t', String(L + F + 0.5), '-i', src,
-    ...endCardInputs(),
+    ...endCardInputs(endPhoto),
     '-filter_complex', f.join(';'),
     '-map', '[v]', '-map', '[a]',
     '-c:v', 'libx264', '-preset', 'slow', '-crf', '18', '-profile:v', 'high', '-pix_fmt', 'yuv420p', '-r', String(FPS),

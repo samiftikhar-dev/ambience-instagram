@@ -27,17 +27,17 @@ function dt(dir, name, value, { font, size, y, color = 'white' }) {
 export const endCardAvailable = () => existsSync(END_PHOTO) && existsSync(END_LOGO);
 
 /** ffmpeg input arguments for the card's photo and logo (two inputs, in this order). */
-export const endCardInputs = () => [
-  '-loop', '1', '-framerate', '30', '-t', String(END_LENGTH), '-i', END_PHOTO,
+export const endCardInputs = (photo = END_PHOTO) => [
+  '-loop', '1', '-framerate', '30', '-t', String(END_LENGTH), '-i', photo,
   '-loop', '1', '-framerate', '30', '-t', String(END_LENGTH), '-i', END_LOGO,
 ];
 
 /** Filters that turn the photo input (index p) and logo input (index l) into the labelled stream [end]. */
-export function endCardFilters(dir, p, l, hours) {
+export function endCardFilters(dir, p, l, hours, line1 = 'Real places, real sound.') {
   const text = [
     dt(dir, 'e_name', spaced('The Ambience Experience'), { font: SANS, size: 32, y: 640, color: '0xE8E4DC' }),
     dt(dir, 'e_l0', "Hi, I'm Bob.", { font: SERIF, size: 76, y: 720 }),
-    dt(dir, 'e_l1', 'Real places, real sound.', { font: SERIF, size: 48, y: 836 }),
+    dt(dir, 'e_l1', line1, { font: SERIF, size: 48, y: 836 }),
     dt(dir, 'e_l2', 'Follow for more scenes like this.', { font: SERIF, size: 48, y: 920 }),
     dt(dir, 'e_c0', `The full ${hoursWord(hours)}-hour video`, { font: SANS, size: 40, y: 1060, color: '0xE09A52' }),
     dt(dir, 'e_c1', 'is on YouTube.', { font: SANS, size: 40, y: 1118, color: '0xE09A52' }),

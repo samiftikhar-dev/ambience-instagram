@@ -1,5 +1,56 @@
 [
   {
+    "id": "bDL-UAnYRH4-1",
+    "video": "bDL-UAnYRH4",
+    "hook": "A haunted study, lit by candlelight",
+    "start": 14,
+    "focus": 0.5,
+    "fit": "full"
+  },
+  {
+    "id": "bDL-UAnYRH4-2",
+    "video": "bDL-UAnYRH4",
+    "src": "bDL-UAnYRH4-b",
+    "hook": "Ghosts waltz across the library floor",
+    "start": 6,
+    "focus": 0.5,
+    "fit": "full"
+  },
+  {
+    "id": "bDL-UAnYRH4-3",
+    "video": "bDL-UAnYRH4",
+    "hook": "A book that turns its own pages",
+    "start": 12,
+    "focus": 0.5,
+    "fit": "full"
+  },
+  {
+    "id": "bDL-UAnYRH4-4",
+    "video": "bDL-UAnYRH4",
+    "src": "bDL-UAnYRH4-b",
+    "hook": "A midnight waltz in the library",
+    "start": 52,
+    "focus": 0.5,
+    "fit": "full"
+  },
+  {
+    "id": "bDL-UAnYRH4-5",
+    "video": "bDL-UAnYRH4",
+    "hook": "A quiet corner of the haunted study",
+    "start": 70,
+    "focus": 0.5,
+    "fit": "full"
+  },
+  {
+    "id": "bDL-UAnYRH4-6",
+    "video": "bDL-UAnYRH4",
+    "src": "bDL-UAnYRH4-b",
+    "hook": "Dancing ghosts and a glowing fire",
+    "start": 92,
+    "focus": 0.5,
+    "fit": "full"
+  },
+  {
     "id": "GkS-f5JLaUE-1",
     "video": "GkS-f5JLaUE",
     "hook": "An autumn morning by the falls",
