@@ -10,6 +10,15 @@
   {
     "id": "bDL-UAnYRH4-2",
     "video": "bDL-UAnYRH4",
+    "src": "bDL-UAnYRH4-d",
+    "hook": "A werewolf waits outside the window",
+    "start": 30,
+    "focus": 0.5,
+    "fit": "full"
+  },
+  {
+    "id": "bDL-UAnYRH4-3",
+    "video": "bDL-UAnYRH4",
     "src": "bDL-UAnYRH4-b",
     "hook": "Ghosts waltz across the library floor",
     "start": 6,
@@ -17,7 +26,16 @@
     "fit": "full"
   },
   {
-    "id": "bDL-UAnYRH4-3",
+    "id": "bDL-UAnYRH4-4",
+    "video": "bDL-UAnYRH4",
+    "src": "bDL-UAnYRH4-c",
+    "hook": "A spider drops down at the window",
+    "start": 0,
+    "focus": 0.5,
+    "fit": "full"
+  },
+  {
+    "id": "bDL-UAnYRH4-5",
     "video": "bDL-UAnYRH4",
     "hook": "A book that turns its own pages",
     "start": 12,
@@ -25,7 +43,16 @@
     "fit": "full"
   },
   {
-    "id": "bDL-UAnYRH4-4",
+    "id": "bDL-UAnYRH4-6",
+    "video": "bDL-UAnYRH4",
+    "src": "bDL-UAnYRH4-d",
+    "hook": "Moonlight over a haunted castle",
+    "start": 60,
+    "focus": 0.5,
+    "fit": "full"
+  },
+  {
+    "id": "bDL-UAnYRH4-7",
     "video": "bDL-UAnYRH4",
     "src": "bDL-UAnYRH4-b",
     "hook": "A midnight waltz in the library",
@@ -34,7 +61,16 @@
     "fit": "full"
   },
   {
-    "id": "bDL-UAnYRH4-5",
+    "id": "bDL-UAnYRH4-8",
+    "video": "bDL-UAnYRH4",
+    "src": "bDL-UAnYRH4-c",
+    "hook": "Spiders come and go by the window",
+    "start": 80,
+    "focus": 0.5,
+    "fit": "full"
+  },
+  {
+    "id": "bDL-UAnYRH4-9",
     "video": "bDL-UAnYRH4",
     "hook": "A quiet corner of the haunted study",
     "start": 70,
@@ -42,7 +78,7 @@
     "fit": "full"
   },
   {
-    "id": "bDL-UAnYRH4-6",
+    "id": "bDL-UAnYRH4-10",
     "video": "bDL-UAnYRH4",
     "src": "bDL-UAnYRH4-b",
     "hook": "Dancing ghosts and a glowing fire",

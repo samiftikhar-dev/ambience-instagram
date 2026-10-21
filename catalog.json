@@ -1,176 +1,623 @@
 {
   "_rules": "One entry per YouTube video. Facts come from Bob's own descriptions and from corrections by Mackenzie and Bob; nothing is invented or inferred. 'made' says what is real and what was added, leading with the real. 'generic' marks the channel-wide line used where nothing more is known: it never says photograph or video. 'photo' is true only where a description or Bob/Mackenzie says the picture began as a photograph. 'footage' is true only where the picture itself is a recording (video); only then may a hook say 'I filmed this' or 'I recorded this'. 'fire' is true where a fire is in the picture: Mackenzie (Oct 10) says none of the fires were recorded, they are all AI-generated, so the caption always says so. 'season' holds a video until that season (plan.mjs HELD_SEASONS). 'sharedSound' means other people recorded some of the sound, so the first Reel does not use the intro that says Bob records the sounds himself. 'onSite' allows saying the sound was recorded at this place. 'posted' videos were already seen on Instagram once and go last. 'anon' places have no real name, so no place line. Hooks: 48 characters at most, no colons, true for the video, never the same pattern twice, never just listing the sounds the caption lists next, never the title read back to back.",
   "GkS-f5JLaUE": {
-    "short": "Autumn Falls", "place": "Autumn Falls", "region": null, "anon": true, "hours": 9, "footage": true, "fire": true,
-    "sounds": "a waterfall and a crackling fire", "onSite": false,
+    "short": "Autumn Falls",
+    "place": "Autumn Falls",
+    "region": null,
+    "anon": true,
+    "hours": 9,
+    "footage": true,
+    "fire": true,
+    "sounds": "a waterfall and a crackling fire",
+    "onSite": false,
     "made": "The falls and the moving water are my footage, filmed on location. The porch and the fire are AI-assisted.",
-    "hooks": ["An autumn morning by the falls", "Fall color, a morning fire and a waterfall", "Leaves moving in the morning breeze"],
-    "tags": ["#autumnambience", "#waterfallsounds", "#fireplacesounds", "#cozyautumn", "#natureasmr"]
+    "hooks": [
+      "An autumn morning by the falls",
+      "Fall color, a morning fire and a waterfall",
+      "Leaves moving in the morning breeze"
+    ],
+    "tags": [
+      "#autumnambience",
+      "#waterfallsounds",
+      "#fireplacesounds",
+      "#cozyautumn",
+      "#natureasmr"
+    ]
   },
   "VFeKFpb8ZPM": {
-    "short": "Sunrise, Mount Rainier", "place": "Sunrise, Mount Rainier National Park", "region": "Washington", "hours": 2, "footage": true, "fire": true,
-    "sounds": "a small fire and morning birds", "onSite": false,
+    "short": "Sunrise, Mount Rainier",
+    "place": "Sunrise, Mount Rainier National Park",
+    "region": "Washington",
+    "hours": 2,
+    "footage": true,
+    "fire": true,
+    "sounds": "a small fire and morning birds",
+    "onSite": false,
     "made": "The sunrise is real footage, and the sound is a natural field recording.",
-    "hooks": ["Sunrise at Sunrise, Mount Rainier", "First light over the Cascades", "Two hours of quiet mountain morning"],
-    "tags": ["#mountrainier", "#sunriseambience", "#campfiresounds", "#pnwonderland", "#natureasmr"]
+    "hooks": [
+      "Sunrise at Sunrise, Mount Rainier",
+      "First light over the Cascades",
+      "Two hours of quiet mountain morning"
+    ],
+    "tags": [
+      "#mountrainier",
+      "#sunriseambience",
+      "#campfiresounds",
+      "#pnwonderland",
+      "#natureasmr"
+    ]
   },
   "XIqxg9G5ILI": {
-    "short": "Bow Falls, Banff", "place": "Bow Falls", "region": "Banff, Alberta", "hours": 9, "footage": true, "fire": true,
-    "sounds": "the falls, gentle birdsong and a crackling fire", "onSite": true,
+    "short": "Bow Falls, Banff",
+    "place": "Bow Falls",
+    "region": "Banff, Alberta",
+    "hours": 9,
+    "footage": true,
+    "fire": true,
+    "sounds": "the falls, gentle birdsong and a crackling fire",
+    "onSite": true,
     "made": "The river, the falls and the mountains are my footage from this spring, with the falls recorded at the same time. The fire sound and birdsong were recorded elsewhere, and the seating area and the fire are AI.",
-    "hooks": ["I filmed this at Bow Falls in Banff", "Turn your sound up for Bow Falls", "Nine hours beside Bow Falls"],
-    "tags": ["#bowfalls", "#banff", "#waterfallsounds", "#campfireambience", "#sleepsounds"]
+    "hooks": [
+      "I filmed this at Bow Falls in Banff",
+      "Turn your sound up for Bow Falls",
+      "Nine hours beside Bow Falls"
+    ],
+    "tags": [
+      "#bowfalls",
+      "#banff",
+      "#waterfallsounds",
+      "#campfireambience",
+      "#sleepsounds"
+    ]
   },
   "p2Q7J_TNuGA": {
-    "short": "Rain on a quiet lake", "place": "A lake in the Pacific Northwest", "region": null, "anon": true, "hours": 9, "photo": true, "fire": true,
-    "sounds": "gentle rain, a crackling fireplace and distant thunder", "onSite": true,
+    "short": "Rain on a quiet lake",
+    "place": "A lake in the Pacific Northwest",
+    "region": null,
+    "anon": true,
+    "hours": 9,
+    "photo": true,
+    "fire": true,
+    "sounds": "gentle rain, a crackling fireplace and distant thunder",
+    "onSite": true,
     "made": "This began as my own photo of the lake, and every sound was recorded near it. The motion is subtle AI animation.",
-    "hooks": ["Rain on the lake, a fire on the deck", "Watch the ducks paddle through the rain", "Distant thunder over a quiet lake"],
-    "tags": ["#rainambience", "#rainsounds", "#cozyrain", "#sleepsounds", "#lakeambience"]
+    "hooks": [
+      "Rain on the lake, a fire on the deck",
+      "Watch the ducks paddle through the rain",
+      "Distant thunder over a quiet lake"
+    ],
+    "tags": [
+      "#rainambience",
+      "#rainsounds",
+      "#cozyrain",
+      "#sleepsounds",
+      "#lakeambience"
+    ]
   },
   "2rFgIGbhNtA": {
-    "short": "Twin Falls, Washington", "place": "Twin Falls", "region": "Washington", "hours": 9, "footage": true, "fire": true,
-    "sounds": "rushing river water and a crackling fire", "onSite": false,
+    "short": "Twin Falls, Washington",
+    "place": "Twin Falls",
+    "region": "Washington",
+    "hours": 9,
+    "footage": true,
+    "fire": true,
+    "sounds": "rushing river water and a crackling fire",
+    "onSite": false,
     "made": "I filmed the river while hiking. The seat carved into the rock is imagined, following the real shape of the rock.",
-    "hooks": ["A hike to the river below Twin Falls", "A seat in the rock beside the river", "Nine hours of rushing water"],
-    "tags": ["#riversounds", "#campfireambience", "#washingtonstate", "#twinfalls", "#natureasmr"]
+    "hooks": [
+      "A hike to the river below Twin Falls",
+      "A seat in the rock beside the river",
+      "Nine hours of rushing water"
+    ],
+    "tags": [
+      "#riversounds",
+      "#campfireambience",
+      "#washingtonstate",
+      "#twinfalls",
+      "#natureasmr"
+    ]
   },
   "KGhhKbZ1NZ4": {
-    "short": "The Sawtooths, Idaho", "place": "Stanley Basin", "region": "Sawtooth Mountains, Idaho", "hours": 9, "photo": true, "fire": true,
-    "sounds": "wind, flowing water, a crackling fire, birdsong and a gently ringing bell", "onSite": false,
+    "short": "The Sawtooths, Idaho",
+    "place": "Stanley Basin",
+    "region": "Sawtooth Mountains, Idaho",
+    "hours": 9,
+    "photo": true,
+    "fire": true,
+    "sounds": "wind, flowing water, a crackling fire, birdsong and a gently ringing bell",
+    "onSite": false,
     "made": "This began as a photo I took here years ago, expanded and animated with moving water, wind and clouds. The sounds are genuine field recordings.",
-    "hooks": ["My Sawtooths photo, brought to life", "Summer afternoon above the Salmon River", "Mountain wind, a river and a warm fire"],
-    "tags": ["#sawtoothmountains", "#idaho", "#cabinambience", "#mountainviews", "#natureasmr"]
+    "hooks": [
+      "My Sawtooths photo, brought to life",
+      "Summer afternoon above the Salmon River",
+      "Mountain wind, a river and a warm fire"
+    ],
+    "tags": [
+      "#sawtoothmountains",
+      "#idaho",
+      "#cabinambience",
+      "#mountainviews",
+      "#natureasmr"
+    ]
   },
   "ERo2kfGJJXA": {
-    "short": "Kay Falls, BC", "place": "Kay Falls", "region": "British Columbia", "hours": 9, "posted": true, "fire": true,
-    "sounds": "the rushing falls and a stone fireplace", "onSite": true,
+    "short": "Kay Falls, BC",
+    "place": "Kay Falls",
+    "region": "British Columbia",
+    "hours": 9,
+    "posted": true,
+    "fire": true,
+    "sounds": "the rushing falls and a stone fireplace",
+    "onSite": true,
     "made": "Only the sound is a recording. The waterfall was recorded at Kay Falls and the fireplace separately. The picture, including the fire, is AI-assisted.",
-    "hooks": ["Real waterfall sound from British Columbia", "Nine hours in a timber cabin", "Sleep beside a hidden waterfall"],
-    "tags": ["#waterfallsounds", "#cabinambience", "#britishcolumbia", "#fireplacesounds", "#sleepsounds"]
+    "hooks": [
+      "Real waterfall sound from British Columbia",
+      "Nine hours in a timber cabin",
+      "Sleep beside a hidden waterfall"
+    ],
+    "tags": [
+      "#waterfallsounds",
+      "#cabinambience",
+      "#britishcolumbia",
+      "#fireplacesounds",
+      "#sleepsounds"
+    ]
   },
   "8a97ygxGfss": {
-    "short": "Desert storm, Arizona", "place": "Hieroglyphic Spring", "region": "Arizona", "hours": 9, "photo": true, "posted": true, "sharedSound": true,
-    "sounds": "monsoon rain, thunder and flowing water", "onSite": false,
+    "short": "Desert storm, Arizona",
+    "place": "Hieroglyphic Spring",
+    "region": "Arizona",
+    "hours": 9,
+    "photo": true,
+    "posted": true,
+    "sharedSound": true,
+    "sounds": "monsoon rain, thunder and flowing water",
+    "onSite": false,
     "made": "This began as a photo I took on a hike at Hieroglyphic Spring. The shelter and the storm are AI. The rain, thunder and water are field recordings by me and other recordists.",
-    "hooks": ["A monsoon storm over the Arizona desert", "Nearly 100 lightning strikes in one loop", "Rain and thunder recorded in the field"],
-    "tags": ["#thunderstormsounds", "#rainsounds", "#arizonamonsoon", "#desertstorm", "#sleepsounds"]
+    "hooks": [
+      "A monsoon storm over the Arizona desert",
+      "Nearly 100 lightning strikes in one loop",
+      "Rain and thunder recorded in the field"
+    ],
+    "tags": [
+      "#thunderstormsounds",
+      "#rainsounds",
+      "#arizonamonsoon",
+      "#desertstorm",
+      "#sleepsounds"
+    ]
   },
   "o5rIMjVFMmw": {
-    "short": "Fall Creek waterfall", "place": "Fall Creek", "region": null, "hours": 9, "footage": true, "posted": true, "fire": true,
-    "sounds": "a waterfall and a firepit", "onSite": true,
+    "short": "Fall Creek waterfall",
+    "place": "Fall Creek",
+    "region": null,
+    "hours": 9,
+    "footage": true,
+    "posted": true,
+    "fire": true,
+    "sounds": "a waterfall and a firepit",
+    "onSite": true,
     "made": "The falls and their sound are one real recording, and the scene around them is added.",
-    "hooks": ["I recorded this waterfall at Fall Creek", "A gazebo, a fire and a waterfall", "Nine hours of falling water"],
-    "tags": ["#waterfallsounds", "#fallcreek", "#firepit", "#natureasmr", "#sleepsounds"]
+    "hooks": [
+      "I recorded this waterfall at Fall Creek",
+      "A gazebo, a fire and a waterfall",
+      "Nine hours of falling water"
+    ],
+    "tags": [
+      "#waterfallsounds",
+      "#fallcreek",
+      "#firepit",
+      "#natureasmr",
+      "#sleepsounds"
+    ]
   },
   "FUCjvCCEFz4": {
-    "short": "Broadway Cave, Phoenix", "place": "Broadway Cave", "region": "Phoenix, Arizona", "hours": 9, "fire": true,
-    "sounds": "only a crackling campfire", "onSite": false,
-    "made": "The place and the sound are real, and AI helps shape the visuals.", "generic": true,
-    "hooks": ["A campfire in Broadway Cave, above Phoenix", "Sunset to stars in Broadway Cave", "The only sound is the fire"],
-    "tags": ["#campfiresounds", "#stargazing", "#phoenixarizona", "#desertnights", "#sleepsounds"]
+    "short": "Broadway Cave, Phoenix",
+    "place": "Broadway Cave",
+    "region": "Phoenix, Arizona",
+    "hours": 9,
+    "fire": true,
+    "sounds": "only a crackling campfire",
+    "onSite": false,
+    "made": "The place and the sound are real, and AI helps shape the visuals.",
+    "generic": true,
+    "hooks": [
+      "A campfire in Broadway Cave, above Phoenix",
+      "Sunset to stars in Broadway Cave",
+      "The only sound is the fire"
+    ],
+    "tags": [
+      "#campfiresounds",
+      "#stargazing",
+      "#phoenixarizona",
+      "#desertnights",
+      "#sleepsounds"
+    ]
   },
   "NcEmJ5Z52to": {
-    "short": "Grassi Lakes, Alberta", "place": "Grassi Lakes", "region": "Canmore, Alberta, near Banff", "hours": 9, "footage": true, "fire": true,
-    "sounds": "lake water, birdsong and a campfire", "onSite": true,
+    "short": "Grassi Lakes, Alberta",
+    "place": "Grassi Lakes",
+    "region": "Canmore, Alberta, near Banff",
+    "hours": 9,
+    "footage": true,
+    "fire": true,
+    "sounds": "lake water, birdsong and a campfire",
+    "onSite": true,
     "made": "The footage is real, and I recorded the sound around the lake. Subtle animation brings the water and sky to life, and the fire is AI-generated.",
-    "hooks": ["I filmed this at Grassi Lakes, near Banff", "A tent, a turquoise lake and a campfire", "Turn your sound up for a lake in the Rockies"],
-    "tags": ["#grassilakes", "#banff", "#canadianrockies", "#campfireambience", "#natureasmr"]
+    "hooks": [
+      "I filmed this at Grassi Lakes, near Banff",
+      "A tent, a turquoise lake and a campfire",
+      "Turn your sound up for a lake in the Rockies"
+    ],
+    "tags": [
+      "#grassilakes",
+      "#banff",
+      "#canadianrockies",
+      "#campfireambience",
+      "#natureasmr"
+    ]
   },
   "aTX1B8qvLdU": {
-    "short": "Fall Creek valley", "place": "Fall Creek", "region": null, "hours": 9, "footage": true, "fire": true,
-    "sounds": "flowing water, birdsong and a crackling fire", "onSite": true,
+    "short": "Fall Creek valley",
+    "place": "Fall Creek",
+    "region": null,
+    "hours": 9,
+    "footage": true,
+    "fire": true,
+    "sounds": "flowing water, birdsong and a crackling fire",
+    "onSite": true,
     "made": "I filmed this valley at Fall Creek and recorded the water and the birds there. The scene is enhanced.",
-    "hooks": ["Watch for the fly fisherman", "A valley, a waterfall and a warm fire", "Birdsong over a waterfall valley"],
-    "tags": ["#waterfallsounds", "#fallcreek", "#birdsong", "#natureasmr", "#relaxingsounds"]
+    "hooks": [
+      "Watch for the fly fisherman",
+      "A valley, a waterfall and a warm fire",
+      "Birdsong over a waterfall valley"
+    ],
+    "tags": [
+      "#waterfallsounds",
+      "#fallcreek",
+      "#birdsong",
+      "#natureasmr",
+      "#relaxingsounds"
+    ]
   },
   "EndB3H7G9xY": {
-    "short": "A desert oasis", "place": "The Coachella Valley", "region": "California", "hours": 9, "fire": true,
-    "sounds": "a desert breeze, soft birdsong and a firepit", "onSite": true,
+    "short": "A desert oasis",
+    "place": "The Coachella Valley",
+    "region": "California",
+    "hours": 9,
+    "fire": true,
+    "sounds": "a desert breeze, soft birdsong and a firepit",
+    "onSite": true,
     "made": "The sound was recorded on location. The motion of the trees, lanterns and pool is added.",
-    "hooks": ["A desert pool and a warm fire", "Trees swaying beside a desert pool", "Lanterns swaying beside the pool"],
-    "tags": ["#desertambience", "#firepit", "#poolside", "#coachellavalley", "#relaxingsounds"]
+    "hooks": [
+      "A desert pool and a warm fire",
+      "Trees swaying beside a desert pool",
+      "Lanterns swaying beside the pool"
+    ],
+    "tags": [
+      "#desertambience",
+      "#firepit",
+      "#poolside",
+      "#coachellavalley",
+      "#relaxingsounds"
+    ]
   },
   "Ud9OamPfHJo": {
-    "short": "Rain on Kauai", "place": "Kauai", "region": "Hawaii", "hours": 9,
-    "sounds": "heavy tropical rain", "onSite": false,
+    "short": "Rain on Kauai",
+    "place": "Kauai",
+    "region": "Hawaii",
+    "hours": 9,
+    "sounds": "heavy tropical rain",
+    "onSite": false,
     "made": "The rain is a real field recording, and the Kauai scene is enhanced and animated.",
-    "hooks": ["A rainy afternoon on Kauai", "Lush green valleys under steady rain", "Nine hours of Kauai rain"],
-    "tags": ["#rainsounds", "#kauai", "#tropicalrain", "#sleepsounds", "#rainambience"]
+    "hooks": [
+      "A rainy afternoon on Kauai",
+      "Lush green valleys under steady rain",
+      "Nine hours of Kauai rain"
+    ],
+    "tags": [
+      "#rainsounds",
+      "#kauai",
+      "#tropicalrain",
+      "#sleepsounds",
+      "#rainambience"
+    ]
   },
   "qFIUSfn6lhs": {
-    "short": "Winter rain, lake cabin", "place": "A misty lake in the Pacific Northwest", "region": null, "anon": true, "hours": 9, "photo": true, "fire": true,
-    "sounds": "steady winter rain and a crackling fireplace", "onSite": false,
+    "short": "Winter rain, lake cabin",
+    "place": "A misty lake in the Pacific Northwest",
+    "region": null,
+    "anon": true,
+    "hours": 9,
+    "photo": true,
+    "fire": true,
+    "sounds": "steady winter rain and a crackling fireplace",
+    "onSite": false,
     "made": "This is a hybrid of my own photos and AI-generated clips. All the sound is my own original recording.",
-    "hooks": ["Winter rain on a cabin deck", "Storm clouds drifting past the deck", "Rain and a fireplace for nine hours"],
-    "tags": ["#rainsounds", "#cabinambience", "#cozyrain", "#sleepsounds", "#fireplacesounds"]
+    "hooks": [
+      "Winter rain on a cabin deck",
+      "Storm clouds drifting past the deck",
+      "Rain and a fireplace for nine hours"
+    ],
+    "tags": [
+      "#rainsounds",
+      "#cabinambience",
+      "#cozyrain",
+      "#sleepsounds",
+      "#fireplacesounds"
+    ]
   },
   "V63ZKoDurZ0": {
-    "short": "A creek-side cabin", "place": "A mountain creek cabin", "region": null, "anon": true, "hours": 9, "photo": true, "fire": true, "season": "spring",
-    "sounds": "singing birds, a crackling fire and a rushing creek", "onSite": false,
+    "short": "A creek-side cabin",
+    "place": "A mountain creek cabin",
+    "region": null,
+    "anon": true,
+    "hours": 9,
+    "photo": true,
+    "fire": true,
+    "season": "spring",
+    "sounds": "singing birds, a crackling fire and a rushing creek",
+    "onSite": false,
     "made": "Inspired by my original nature photography, with AI-assisted animation. The sound is real field recordings of the surroundings.",
-    "hooks": ["A mountain creek at sunrise", "A creek in full spring runoff", "Nine hours of a mountain morning"],
-    "tags": ["#creeksounds", "#cabinambience", "#birdsong", "#mountainmorning", "#natureasmr"]
+    "hooks": [
+      "A mountain creek at sunrise",
+      "A creek in full spring runoff",
+      "Nine hours of a mountain morning"
+    ],
+    "tags": [
+      "#creeksounds",
+      "#cabinambience",
+      "#birdsong",
+      "#mountainmorning",
+      "#natureasmr"
+    ]
   },
   "oBeHCs9fbwE": {
-    "short": "Joshua Tree at night", "place": "Hidden Valley, Joshua Tree", "region": "California", "hours": 9, "fire": true,
-    "sounds": "a campfire and crickets", "onSite": false,
+    "short": "Joshua Tree at night",
+    "place": "Hidden Valley, Joshua Tree",
+    "region": "California",
+    "hours": 9,
+    "fire": true,
+    "sounds": "a campfire and crickets",
+    "onSite": false,
     "made": "The fire sound and the crickets are real field recordings. The moving stars and the fire you see are AI-animated.",
-    "hooks": ["A campfire under the Milky Way", "A night in Hidden Valley, Joshua Tree", "Stargazing in Joshua Tree for nine hours"],
-    "tags": ["#joshuatree", "#stargazing", "#campfiresounds", "#milkyway", "#sleepsounds"]
+    "hooks": [
+      "A campfire under the Milky Way",
+      "A night in Hidden Valley, Joshua Tree",
+      "Stargazing in Joshua Tree for nine hours"
+    ],
+    "tags": [
+      "#joshuatree",
+      "#stargazing",
+      "#campfiresounds",
+      "#milkyway",
+      "#sleepsounds"
+    ]
   },
   "Z0W-MjDr2cw": {
-    "short": "Tree frogs at Fisher Pond", "place": "Fisher Pond", "region": null, "hours": 9, "fire": true,
-    "sounds": "a Pacific tree frog chorus, evening birds, light rain and a fire pit", "onSite": false,
-    "made": "The place and the sound are real, and AI helps shape the visuals.", "generic": true,
-    "hooks": ["Pacific tree frogs at dusk", "An evening beside a quiet pond", "Where the evening settles over the water"],
-    "tags": ["#frogsounds", "#nightambience", "#lakesideambience", "#firepit", "#sleepsounds"]
+    "short": "Tree frogs at Fisher Pond",
+    "place": "Fisher Pond",
+    "region": null,
+    "hours": 9,
+    "fire": true,
+    "sounds": "a Pacific tree frog chorus, evening birds, light rain and a fire pit",
+    "onSite": false,
+    "made": "The place and the sound are real, and AI helps shape the visuals.",
+    "generic": true,
+    "hooks": [
+      "Pacific tree frogs at dusk",
+      "An evening beside a quiet pond",
+      "Where the evening settles over the water"
+    ],
+    "tags": [
+      "#frogsounds",
+      "#nightambience",
+      "#lakesideambience",
+      "#firepit",
+      "#sleepsounds"
+    ]
   },
   "LbVCwLcFBV0": {
-    "short": "The Hoh Rainforest", "place": "The Hoh Rainforest", "region": "Washington", "hours": 9, "fire": true,
-    "sounds": "steady rain and a crackling fireplace", "onSite": false,
-    "made": "The place and the sound are real, and AI helps shape the visuals.", "generic": true,
-    "hooks": ["Rain in the Hoh Rainforest", "Twelve feet of rain a year, and a fire", "Rain and a fire in a glass-walled room"],
-    "tags": ["#hohrainforest", "#rainsounds", "#fireplacesounds", "#rainforest", "#sleepsounds"]
+    "short": "The Hoh Rainforest",
+    "place": "The Hoh Rainforest",
+    "region": "Washington",
+    "hours": 9,
+    "fire": true,
+    "sounds": "steady rain and a crackling fireplace",
+    "onSite": false,
+    "made": "The place and the sound are real, and AI helps shape the visuals.",
+    "generic": true,
+    "hooks": [
+      "Rain in the Hoh Rainforest",
+      "Twelve feet of rain a year, and a fire",
+      "Rain and a fire in a glass-walled room"
+    ],
+    "tags": [
+      "#hohrainforest",
+      "#rainsounds",
+      "#fireplacesounds",
+      "#rainforest",
+      "#sleepsounds"
+    ]
   },
   "Cukxb8epBws": {
-    "short": "A forest river camp", "place": "A forest river camp", "region": null, "anon": true, "hours": 9, "footage": true, "fire": true,
-    "sounds": "a flowing river, a crackling campfire and a gently boiling cauldron", "onSite": true,
+    "short": "A forest river camp",
+    "place": "A forest river camp",
+    "region": null,
+    "anon": true,
+    "hours": 9,
+    "footage": true,
+    "fire": true,
+    "sounds": "a flowing river, a crackling campfire and a gently boiling cauldron",
+    "onSite": true,
     "made": "The river footage and the audio were recorded on location. The fire you see is AI-generated, and subtle visual details are enhanced.",
-    "hooks": ["A riverside camp in the woods", "A real forest river, nine hours long", "A campfire beside a forest river"],
-    "tags": ["#riversounds", "#campfiresounds", "#forestcamp", "#nightambience", "#sleepsounds"]
+    "hooks": [
+      "A riverside camp in the woods",
+      "A real forest river, nine hours long",
+      "A campfire beside a forest river"
+    ],
+    "tags": [
+      "#riversounds",
+      "#campfiresounds",
+      "#forestcamp",
+      "#nightambience",
+      "#sleepsounds"
+    ]
   },
   "1-6DCrkii30": {
-    "short": "Palisades Creek", "place": "Palisades Creek", "region": null, "hours": 9, "footage": true, "fire": true, "season": "spring",
-    "sounds": "a creek in spring runoff, a soft breeze and a firepit", "onSite": true,
+    "short": "Palisades Creek",
+    "place": "Palisades Creek",
+    "region": null,
+    "hours": 9,
+    "footage": true,
+    "fire": true,
+    "season": "spring",
+    "sounds": "a creek in spring runoff, a soft breeze and a firepit",
+    "onSite": true,
     "made": "I recorded the video and the sound at Palisades Creek, and the scene is enhanced for late spring with subtle motion in the leaves.",
-    "hooks": ["Start the day beside a rushing creek", "Put this on while you work", "Creek water and a morning fire"],
-    "tags": ["#creeksounds", "#springmorning", "#campfire", "#natureasmr", "#focusmusic"]
+    "hooks": [
+      "Start the day beside a rushing creek",
+      "Put this on while you work",
+      "Creek water and a morning fire"
+    ],
+    "tags": [
+      "#creeksounds",
+      "#springmorning",
+      "#campfire",
+      "#natureasmr",
+      "#focusmusic"
+    ]
   },
   "ppIA-0nR2uc": {
-    "short": "Skagit Valley tulips", "place": "The Skagit Valley tulip fields", "region": "Washington", "hours": 9, "fire": true, "season": "spring",
-    "sounds": "birdsong, soft outdoor sounds and a warm firepit", "onSite": false,
-    "made": "The place and the sound are real, and AI helps shape the visuals.", "generic": true,
-    "hooks": ["Coffee by the fire, tulips all around", "A windmill turning in tulip season", "Tulips and Mount Baker, nine hours long"],
-    "tags": ["#skagitvalley", "#tulipfestival", "#springambience", "#mountbaker", "#coffeeambience"]
+    "short": "Skagit Valley tulips",
+    "place": "The Skagit Valley tulip fields",
+    "region": "Washington",
+    "hours": 9,
+    "fire": true,
+    "season": "spring",
+    "sounds": "birdsong, soft outdoor sounds and a warm firepit",
+    "onSite": false,
+    "made": "The place and the sound are real, and AI helps shape the visuals.",
+    "generic": true,
+    "hooks": [
+      "Coffee by the fire, tulips all around",
+      "A windmill turning in tulip season",
+      "Tulips and Mount Baker, nine hours long"
+    ],
+    "tags": [
+      "#skagitvalley",
+      "#tulipfestival",
+      "#springambience",
+      "#mountbaker",
+      "#coffeeambience"
+    ]
   },
   "baWJQgAw5Ss": {
-    "short": "A cabin in the Cascades", "place": "A cabin above Reflection Lake", "region": "the Cascades", "hours": 9, "fire": true, "season": "spring",
-    "sounds": "a crackling fireplace, birdsong and a spring meadow", "onSite": false,
-    "made": "The place and the sound are real, and AI helps shape the visuals.", "generic": true,
-    "hooks": ["A cabin door open to a spring meadow", "Wildflowers swaying outside a cozy cabin", "A fire, birdsong and a meadow breeze"],
-    "tags": ["#cozycabin", "#springmeadow", "#fireplacesounds", "#cascades", "#relaxingsounds"]
+    "short": "A cabin in the Cascades",
+    "place": "A cabin above Reflection Lake",
+    "region": "the Cascades",
+    "hours": 9,
+    "fire": true,
+    "season": "spring",
+    "sounds": "a crackling fireplace, birdsong and a spring meadow",
+    "onSite": false,
+    "made": "The place and the sound are real, and AI helps shape the visuals.",
+    "generic": true,
+    "hooks": [
+      "A cabin door open to a spring meadow",
+      "Wildflowers swaying outside a cozy cabin",
+      "A fire, birdsong and a meadow breeze"
+    ],
+    "tags": [
+      "#cozycabin",
+      "#springmeadow",
+      "#fireplacesounds",
+      "#cascades",
+      "#relaxingsounds"
+    ]
   },
   "bDL-UAnYRH4": {
-    "short": "Haunted Victorian Library", "place": "A haunted Victorian library", "region": null, "anon": true, "hours": 3.5, "music": true,
-    "priority": true, "endScene": true, "until": "2026-10-31",
-    "tagline": "original Halloween music", "endLine": "Original Halloween music.",
+    "short": "Haunted Victorian Library",
+    "place": "A haunted Victorian library",
+    "region": null,
+    "anon": true,
+    "hours": 3.5,
+    "music": true,
+    "priority": true,
+    "endScene": true,
+    "until": "2026-10-31",
+    "tagline": "original Halloween music",
+    "endLine": "Original Halloween music.",
     "intro": "Hi, I'm Bob! ðŸ‘‹ After a long career as an engineer, I retired and went outside. This Halloween I stayed in, and built a haunted library. Whether you need to focus, unwind, or just want a little shiver, I hope it makes your evening.",
-    "sounds": "original Halloween music and ghostly ambience", "onSite": false,
+    "sounds": "original Halloween music and ghostly ambience",
+    "onSite": false,
     "made": "Everything you see and hear began as AI-assisted generation, from the library and the ghosts to the music. Then I spent nearly 200 hours editing, animating and compositing it in DaVinci Resolve.",
-    "sources": ["bDL-UAnYRH4", "bDL-UAnYRH4-b"],
-    "cuts": [{"src": 0, "start": 14}, {"src": 1, "start": 6}, {"src": 0, "start": 12}, {"src": 1, "start": 52}, {"src": 0, "start": 70}, {"src": 1, "start": 92}],
-    "hooks": ["A haunted study, lit by candlelight", "Ghosts waltz across the library floor", "A book that turns its own pages", "A midnight waltz in the library", "A quiet corner of the haunted study", "Dancing ghosts and a glowing fire"],
-    "tags": ["#halloweenambience", "#hauntedlibrary", "#halloween2026", "#gothicambience", "#spookyseason"]
+    "sources": [
+      "bDL-UAnYRH4",
+      "bDL-UAnYRH4-b",
+      "bDL-UAnYRH4-c",
+      "bDL-UAnYRH4-d"
+    ],
+    "cuts": [
+      {
+        "src": 0,
+        "start": 14
+      },
+      {
+        "src": 3,
+        "start": 30
+      },
+      {
+        "src": 1,
+        "start": 6
+      },
+      {
+        "src": 2,
+        "start": 0
+      },
+      {
+        "src": 0,
+        "start": 12
+      },
+      {
+        "src": 3,
+        "start": 60
+      },
+      {
+        "src": 1,
+        "start": 52
+      },
+      {
+        "src": 2,
+        "start": 80
+      },
+      {
+        "src": 0,
+        "start": 70
+      },
+      {
+        "src": 1,
+        "start": 92
+      }
+    ],
+    "hooks": [
+      "A haunted study, lit by candlelight",
+      "A werewolf waits outside the window",
+      "Ghosts waltz across the library floor",
+      "A spider drops down at the window",
+      "A book that turns its own pages",
+      "Moonlight over a haunted castle",
+      "A midnight waltz in the library",
+      "Spiders come and go by the window",
+      "A quiet corner of the haunted study",
+      "Dancing ghosts and a glowing fire"
+    ],
+    "tags": [
+      "#halloweenambience",
+      "#hauntedlibrary",
+      "#halloween2026",
+      "#gothicambience",
+      "#spookyseason"
+    ]
   }
 }
