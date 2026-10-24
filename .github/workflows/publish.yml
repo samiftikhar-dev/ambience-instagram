@@ -5,7 +5,7 @@ name: Post a Reel
 # scheduled runs by about FIVE hours (Oct 14 and 15: runs set for 8:30pm started
 # near 1:30am and the overnight guard blocked them). So four runs are set earlier,
 # at 1:30, 3:30, 5:30 and 7:30pm Pacific in daylight time: a typical delay then lands
-# in the evening, and publish.mjs keeps 18 hours between Reels, so only one posts.
+# in the evening. One Halloween and one regular Reel a day (Sam, Oct 23), 3 hours apart.
 # Live since Oct 13 2026 (Sam: start posting).
 #
 # Run by hand with mode "burst" to post several, spaced out (the launch post
@@ -13,6 +13,7 @@ name: Post a Reel
 # got the LuxyBasement app blocked).
 on:
   schedule:
+    - cron: '30 18 * * *'
     - cron: '30 20 * * *'
     - cron: '30 22 * * *'
     - cron: '30 0 * * *'
@@ -30,6 +31,9 @@ on:
       spacing:
         description: 'burst: minutes between Reels (30 at least)'
         default: '35'
+      clips:
+        description: 'burst: post these clip ids in order (comma separated) instead of the next in line'
+        default: ''
       anytime:
         description: 'burst: also post between 11pm and 7am Pacific'
         type: boolean
@@ -71,6 +75,7 @@ jobs:
           INPUT_MODE: ${{ github.event.inputs.mode || 'publish' }}
           COUNT: ${{ github.event.inputs.count || '1' }}
           SPACING: ${{ github.event.inputs.spacing || '35' }}
+          CLIPS: ${{ github.event.inputs.clips || '' }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -83,6 +88,7 @@ jobs:
           fi
           rc=0
           for i in $(seq 1 "$n"); do
+            [ -n "$CLIPS" ] && export CLIP=$(echo "$CLIPS" | cut -d, -f$i)
             rc=0; node publish.mjs || rc=$?
             if [ "$rc" = 76 ]; then
               printf 'Instagram refused on %s (token expired, or Meta restricted the app). Renew the token, then delete this file.\n' "$(date -u +%FT%TZ)" > blocked.txt

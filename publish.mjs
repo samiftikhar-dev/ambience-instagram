@@ -26,9 +26,9 @@ const API = 'https://graph.instagram.com/v23.0';
 const TOKEN = process.env.IG_ACCESS_TOKEN;
 const MODE = process.env.MODE || 'publish';
 const REPO = process.env.GITHUB_REPOSITORY;
-// One Reel a day (Mackenzie asked, Sam agreed, Oct 13 2026); a GitHub
+// One Halloween and one regular Reel a day (Sam, Oct 23 2026), at least 3 hours apart; a GitHub
 // delay can bunch two runs, so never closer than this. A burst run sets 0.
-const MIN_GAP_HOURS = Number(process.env.MIN_GAP_HOURS ?? 18);
+const MIN_GAP_HOURS = Number(process.env.MIN_GAP_HOURS ?? 3);
 const RATE_LIMIT = new Set([4, 9, 17, 32, 613]);
 const BLOCKED = new Set([368, 190, 10, 200]);
 
@@ -120,7 +120,21 @@ async function main() {
     process.exit(BLOCKED.has(err.code) ? 76 : RATE_LIMIT.has(err.code) ? 75 : 1);
   }
   const igId = me.user_id || me.id;
-  const next = clips.find((c) => !c.hold && inQueue.has(c.id) && (!done[c.id] || done[c.id].status === 'failed'));
+  const ready = (c) => !c.hold && inQueue.has(c.id) && (!done[c.id] || done[c.id].status === 'failed');
+  const laneOf = (c) => (videos[c.video]?.priority ? 'special' : 'regular');
+  const pacificDay = (t) => new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Los_Angeles' }).format(t);
+  const today = pacificDay(new Date());
+  const byId = new Map(clips.map((c) => [c.id, c]));
+  const postedToday = { special: 0, regular: 0 };
+  for (const [id, d] of Object.entries(done)) {
+    if (d.status === 'published' && byId.has(id) && pacificDay(Date.parse(d.at)) === today) postedToday[laneOf(byId.get(id))]++;
+  }
+  // Sam (Oct 23): one Halloween and one regular Reel a day. CLIP picks a Reel by hand.
+  let next;
+  if (process.env.CLIP) next = clips.find((c) => c.id === process.env.CLIP && ready(c));
+  else for (const lane of ['special', 'regular']) {
+    if (postedToday[lane] < 1) { next = clips.find((c) => ready(c) && laneOf(c) === lane); if (next) break; }
+  }
   const posted = Object.values(done).filter((d) => d.status === 'published');
   const waiting = clips.filter((c) => !c.hold && inQueue.has(c.id) && !done[c.id]).length;
   console.log(`@${me.username}: ${posted.length} Reels posted, ${waiting} rendered and waiting.`);
@@ -130,7 +144,7 @@ async function main() {
     console.log(`Quota used: ${q.quota_usage ?? 0}/${q.config?.quota_total ?? 100}. Next: ${next ? `${next.id} "${next.hook}"` : 'nothing queued'}.`);
     return;
   }
-  if (!next) { console.log('Nothing rendered and waiting. Render more with render.mjs and upload with queue.mjs.'); return; }
+  if (!next) { console.log(process.env.CLIP ? `${process.env.CLIP} is not queued or already posted.` : 'Nothing to post right now: the day\'s Halloween and regular Reels have both gone out, or nothing is queued.'); return; }
 
   // Never overnight, Pacific time, whatever starts the run: night posts reach
   // nobody and read as a bot.
