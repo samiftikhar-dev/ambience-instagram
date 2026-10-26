@@ -129,11 +129,15 @@ async function main() {
   for (const [id, d] of Object.entries(done)) {
     if (d.status === 'published' && byId.has(id) && pacificDay(Date.parse(d.at)) === today) postedToday[laneOf(byId.get(id))]++;
   }
-  // Sam (Oct 23): one Halloween and one regular Reel a day. CLIP picks a Reel by hand.
+  // Sam (Oct 23, Oct 26): two Reels a day until Halloween, then one. While a priority
+  // video is in season that is one Halloween and one regular; once the Halloween
+  // Reels run out, the regular lane takes both. CLIP picks a Reel by hand.
+  const surgeEnd = Object.values(videos).filter((v) => v.priority && v.until).map((v) => v.until).sort().pop() || '';
+  const cap = { special: 1, regular: surgeEnd && today <= surgeEnd ? 2 : 1 };
   let next;
   if (process.env.CLIP) next = clips.find((c) => c.id === process.env.CLIP && ready(c));
   else for (const lane of ['special', 'regular']) {
-    if (postedToday[lane] < 1) { next = clips.find((c) => ready(c) && laneOf(c) === lane); if (next) break; }
+    if (postedToday[lane] < cap[lane]) { next = clips.find((c) => ready(c) && laneOf(c) === lane); if (next) break; }
   }
   const posted = Object.values(done).filter((d) => d.status === 'published');
   const waiting = clips.filter((c) => !c.hold && inQueue.has(c.id) && !done[c.id]).length;
