@@ -13,8 +13,7 @@ the lessons and the state.
   was recorded where. Where a description is silent, use the placeholder line.
 - Nothing posts unless a Reel is approved on the review page AND its video's
   facts are confirmed there. Nothing starts until Sam says "go".
-- ONE Reel a day, about 8:30pm Pacific, never 11pm to 7am. (Mackenzie asked,
-  Sam agreed, Oct 13 2026.) LuxyBasement's Meta app was blocked at about 57
+- TWO Reels a day until Halloween (Sam, Oct 23 and 26), then ONE a day. publish.mjs posts one Halloween (priority) and one regular Reel a day, at least 3 hours apart; once the Halloween Reels run out the regular lane takes both until the Halloween video's until date (Oct 31). Never 11pm to 7am. Mackenzie asked for one a day (Oct 11) and Sam agreed on Oct 13; the Halloween stretch is the exception. LuxyBasement's Meta app was blocked at about 57
   posts in a day.
 - Never automate comments on other people's posts (Instagram forbids it).
   Replies on his own posts and a daily hand-posted comment list are fine.
@@ -77,7 +76,7 @@ note. Sessions here are never to claim a fix without checking the whole set.
 
 ## State (Oct 13 2026)
 
-- Posting is LIVE since Oct 13 2026 (Sam: "start posting"). publish.yml is enabled: one Reel a day at 8:30pm Pacific. Reel 1 (Autumn Falls) went out Oct 13 5:30pm Pacific. approved.json holds the 45 Reels queued (approved by Mackenzie AND facts confirmed); Kay Falls, Mount Rainier, Fall Creek and the desert storm are NOT queued until their facts are confirmed on the review page. To add more: update approved.json from the page, node queue.mjs upload.
+- Posting is LIVE since Oct 13 2026 (Sam: "start posting"). publish.yml is enabled (five slots a day, see the rule above). Reel 1 (Autumn Falls) went out Oct 13 5:30pm Pacific. approved.json holds the 45 Reels queued (approved by Mackenzie AND facts confirmed); Kay Falls, Mount Rainier, Fall Creek and the desert storm are NOT queued until their facts are confirmed on the review page. To add more: update approved.json from the page, node queue.mjs upload.
 - 57 Reels from 19 videos are rendered in out/ (gitignored) in posting order
   (clips.json). Review page: https://claude.ai/artifact/D4LW92esaec6xU2BTQUNCv
   (collections `approvals` and `facts`; rebuild with the scratchpad build.mjs,
